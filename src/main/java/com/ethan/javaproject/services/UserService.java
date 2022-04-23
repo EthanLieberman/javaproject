@@ -37,6 +37,7 @@ public class UserService {
 			//hash and set password, then save user
 			String hashed = BCrypt.hashpw(newUser.getPassword(), BCrypt.gensalt());
 			newUser.setPassword(hashed);
+			newUser.setAdmin(false);
 			return userRepo.save(newUser);
 		}
 

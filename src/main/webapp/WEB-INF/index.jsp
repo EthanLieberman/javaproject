@@ -15,6 +15,9 @@
 </head>
 <body>
 <h1>index</h1>
+<p>Hi ${userName}</p>
+<a href="/enter">Login</a>
+<a href="/logout">Logout</a>
 
 </body>
 </html>

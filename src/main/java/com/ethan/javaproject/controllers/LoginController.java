@@ -1,5 +1,7 @@
 package com.ethan.javaproject.controllers;
 
+import java.util.Optional;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -22,14 +24,14 @@ public class LoginController {
      @Autowired
      private UserService userServ;
     
-    @GetMapping("/")
+    @GetMapping("/enter")
     public String index(Model model) {
     
         // Bind empty User and LoginUser objects to the JSP
         // to capture the form input
         model.addAttribute("newUser", new User());
         model.addAttribute("newLogin", new LoginUser());
-        return "index.jsp";
+        return "login.jsp";
     }
     
     @PostMapping("/register")
@@ -45,11 +47,13 @@ public class LoginController {
             // Be sure to send in the empty LoginUser before 
             // re-rendering the page.
             model.addAttribute("newLogin", new LoginUser());
-            return "index.jsp";
+            return "login.jsp";
         }
 		else {
 			session.setAttribute("userId", newUser.getId());
-			return "redirect:/home";
+			session.setAttribute("userName", newUser.getUserName());
+			session.setAttribute("admin", false);
+			return "redirect:/";
 		}
         
         // No errors! 
@@ -76,11 +80,13 @@ public class LoginController {
     
         if(result.hasErrors()) {
             model.addAttribute("newUser", new User());
-            return "index.jsp";
+            return "login.jsp";
         }
 		else {
 			session.setAttribute("userId", user.getId());
-			return "redirect:/home";
+			session.setAttribute("userName", user.getUserName());
+			session.setAttribute("admin", user.getAdmin());
+			return "redirect:/";
 		}
     
         // No errors! 
@@ -90,19 +96,9 @@ public class LoginController {
         
     }
 
-	@GetMapping("/home")
+	@GetMapping("/")
 	String home(HttpSession session, Model model){
-
-		Long userId = (Long) session.getAttribute("userId");
-
-		if (userId == null){
-			return "redirect:/";
-		}
-		else {
-			User thisUser = userServ.findOne(userId);
-			model.addAttribute("thisUser", thisUser);
-			return "home.jsp";
+		return "index.jsp";
 		}
 	}
     
-}
