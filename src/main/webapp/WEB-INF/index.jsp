@@ -34,9 +34,12 @@
 
 	<div class="search">
 		<a style="font-family: arvo; font-size: 10pt; color: black;"
-			href="/enter">Sign In</a> <label for="search"></label> <input
-			type="search" id="search" placeholder="search for products"
-			name="search">
+			href="/enter">Sign In</a>
+			
+			<form action="/searchRequest" method="post">
+			<input type="search" id="search" placeholder="search for products" name="search">
+			<input type="submit" value="Search">
+			</form>
 
 	</div>
 

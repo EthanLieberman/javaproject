@@ -16,6 +16,9 @@
 <body>
 <h1>Category</h1>
 ${products}
+<c:forEach items="${products }" var="i">
+${i.name}
+</c:forEach>
 
 </body>
 </html>

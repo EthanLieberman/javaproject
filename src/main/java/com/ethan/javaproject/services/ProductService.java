@@ -25,6 +25,11 @@ public class ProductService {
 		return productRepository.findAllByCategory(category);
 	}
     
+//    returns all products containing
+    public List<Product> findAllByNameContaining(String name){
+    	return productRepository.findAllByNameContaining(name);
+    }
+    
     
     // creates a product
     public Product createProduct(Product p) {	//takes datatype and object passed from controller

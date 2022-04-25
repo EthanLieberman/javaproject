@@ -9,7 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ethan.javaproject.models.Cart;
 import com.ethan.javaproject.models.Product;
@@ -25,6 +27,7 @@ public class MainController {
 	ProductService productService;
 	
 	
+//	Products by category
 	@GetMapping("/category/{type}")
 	public String category(@PathVariable("type") String type, Model model) {
 		
@@ -35,7 +38,7 @@ public class MainController {
 		return "category.jsp";
 	}
 	
-	
+//	Single product
 	@GetMapping("/category/{type}/{id}")
 	public String oneItem(@PathVariable("id") Long id, Model model) {
 		
@@ -45,12 +48,31 @@ public class MainController {
 		return "showOne.jsp";
 	}
 	
+//	Products by search button
+	@PostMapping("/searchRequest")
+	public String Search(@RequestParam(value="search") String search) {
+		return "redirect:/searchResults/" + search;
+	}
+	
+
+//	Products by search results
+	@GetMapping("/searchResults/{res}")
+	public String searchResults(@PathVariable("res") String res, Model model) {
+		List<Product> products = productService.findAllByNameContaining(res);
+		model.addAttribute("products", products);
+		return "category.jsp";
+	}
+	
+	
+	
+//	User session shopping cart
 	@GetMapping("/cart")
 	public String cartEmpty() {
 		return "cart.jsp";
 	}
 	
 	
+//	Button to add items to cart
 	@PutMapping("/cart/{id}")
 	public String cart(Model model, HttpSession session, @PathVariable("id") Long id) {
 		Cart cart = (Cart) session.getAttribute("cart");
