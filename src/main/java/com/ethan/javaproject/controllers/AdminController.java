@@ -34,7 +34,9 @@ public class AdminController {
 		
 		Long id = (Long) session.getAttribute("userId");
 		User user = userService.findOne(id);
-		if (!user.getAdmin()) {return "redirect:/";}
+		if (!user.getAdmin()) {
+			return "redirect:/";
+					}
 		
 		else {
 			List<Product> products = productService.allProducts();
@@ -48,16 +50,29 @@ public class AdminController {
 	
 //	---------Add ----------
 	@GetMapping("/productAdd")
-	public String productAdd(@ModelAttribute("product") Product product) {
+	public String productAdd(@ModelAttribute("product") Product product, HttpSession session) {
+		
+		Long id = (Long) session.getAttribute("userId");
+		User user = userService.findOne(id);
+		if (!user.getAdmin()) {
+			return "redirect:/";
+					}
+		
 		return "admin/addProduct.jsp";
 	}
 
 	@PostMapping("/product/create")
 	public String ProductCreate(@Valid
 							@ModelAttribute("product") Product product,
-							BindingResult result) {
+							BindingResult result, HttpSession session) {
+		
+		Long id = (Long) session.getAttribute("userId");
+		User user = userService.findOne(id);
+		if (!user.getAdmin()) {
+			return "redirect:/";
+					}
+		
 		if(result.hasErrors()) {
-			System.out.println("test");
             return "admin/addProduct.jsp";
         }
 		else {
@@ -71,7 +86,15 @@ public class AdminController {
 	
 //	------Update-----------
 	@GetMapping("/update/products/{id}")
-	public String adminUpdate(@ModelAttribute("product") Product product, @PathVariable("id") Long id, Model model) {
+	public String adminUpdate(@ModelAttribute("product") Product product, @PathVariable("id") Long id, Model model, HttpSession session) {
+		
+		Long userid = (Long) session.getAttribute("userId");
+		User user = userService.findOne(userid);
+		if (!user.getAdmin()) {
+			return "redirect:/";
+					}
+		
+		
 		Product product1 = productService.findProduct(id);
 		model.addAttribute("product", product1);
 		return "admin/updateProduct.jsp";
@@ -79,7 +102,14 @@ public class AdminController {
 	
 	
 	@PutMapping("/update/products/{id}")
-	public String updateProduct(@Valid @ModelAttribute("product") Product product, BindingResult result, @PathVariable("id") Long id, Model model) {
+	public String updateProduct(@Valid @ModelAttribute("product") Product product, BindingResult result, @PathVariable("id") Long id, Model model, HttpSession session) {
+		
+		Long userid = (Long) session.getAttribute("userId");
+		User user = userService.findOne(userid);
+		if (!user.getAdmin()) {
+			return "redirect:/";
+					}
+		
 		if(result.hasErrors()) {
 			Product product1 = productService.findProduct(id);
 			model.addAttribute("product", product1);
@@ -94,7 +124,14 @@ public class AdminController {
 	
 //	--------Delete---------
 	@DeleteMapping("/delete/products/{id}")
-	public String adminDelete(@PathVariable("id") Long id) {
+	public String adminDelete(@PathVariable("id") Long id, HttpSession session) {
+		
+		Long userid = (Long) session.getAttribute("userId");
+		User user = userService.findOne(userid);
+		if (!user.getAdmin()) {
+			return "redirect:/";
+					}
+		
 		productService.delete(id);
 		return "redirect:/adminportal";
 	}

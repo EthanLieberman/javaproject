@@ -11,4 +11,6 @@ import com.ethan.javaproject.models.Product;
 public interface ProductRepository extends CrudRepository<Product, Long> {
 
 	List<Product> findAll();
+	
+	List<Product> findAllByCategory(String category);
 }

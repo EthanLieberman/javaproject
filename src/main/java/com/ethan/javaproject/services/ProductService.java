@@ -19,6 +19,13 @@ public class ProductService {
     public List<Product> allProducts() {
         return productRepository.findAll();
     }
+    
+    // returns all products in category
+    public List<Product> findAllByCategory(String category) {
+		return productRepository.findAllByCategory(category);
+	}
+    
+    
     // creates a product
     public Product createProduct(Product p) {	//takes datatype and object passed from controller
         return productRepository.save(p);	//sends to repository

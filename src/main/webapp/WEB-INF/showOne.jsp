@@ -11,15 +11,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>one item</title>
 </head>
 <body>
-<h1>index</h1>
-<p>Hi ${userName}</p>
-<a href="/enter">Login</a>
-<a href="/logout">Logout</a>
+<h1>one Item</h1>
 
-${cart}
+${product}
 
 </body>
 </html>

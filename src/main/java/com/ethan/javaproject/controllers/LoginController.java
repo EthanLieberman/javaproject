@@ -1,7 +1,5 @@
 package com.ethan.javaproject.controllers;
 
-import java.util.Optional;
-
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -13,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.ethan.javaproject.models.Cart;
 import com.ethan.javaproject.models.LoginUser;
 import com.ethan.javaproject.models.User;
 import com.ethan.javaproject.services.UserService;
@@ -98,6 +97,11 @@ public class LoginController {
 
 	@GetMapping("/")
 	String home(HttpSession session, Model model){
+		if (session.getAttribute("cart") == null){
+			Cart cart = new Cart();
+			session.setAttribute("cart", cart);
+		}
+		
 		return "index.jsp";
 		}
 	}
