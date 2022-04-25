@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -14,14 +15,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.ethan.javaproject.models.Cart;
 import com.ethan.javaproject.models.LoginUser;
 import com.ethan.javaproject.models.User;
+import com.ethan.javaproject.services.ProductService;
 import com.ethan.javaproject.services.UserService;
 
 @Controller
+@Scope("session")
 public class LoginController {
     
     // Add once service is implemented:
      @Autowired
      private UserService userServ;
+     @Autowired
+     ProductService productService;
     
     @GetMapping("/enter")
     public String index(Model model) {

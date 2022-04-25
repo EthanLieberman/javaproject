@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import com.ethan.javaproject.models.Cart;
 import com.ethan.javaproject.models.Product;
@@ -50,13 +51,13 @@ public class MainController {
 	}
 	
 	
-	@GetMapping("/cart/{id}")
+	@PutMapping("/cart/{id}")
 	public String cart(Model model, HttpSession session, @PathVariable("id") Long id) {
 		Cart cart = (Cart) session.getAttribute("cart");
 		Product object = productService.findProduct(id);
 		cart.getProducts().add(object);
 		session.setAttribute("cart", cart);
-		return "cart.jsp";
+		return "redirect:/cart";
 	}
 
 }

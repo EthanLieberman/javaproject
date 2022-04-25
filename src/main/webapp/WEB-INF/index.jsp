@@ -11,6 +11,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="icon" type="image/ico" href="/favicon.png">
 <title>Insert title here</title>
 </head>
 <body>
@@ -19,7 +20,10 @@
 <a href="/enter">Login</a>
 <a href="/logout">Logout</a>
 
-${cart}
+${cart.products}
+<c:forEach items="${cart.products}" var="i">
+${i.name}
+</c:forEach>
 
 </body>
 </html>

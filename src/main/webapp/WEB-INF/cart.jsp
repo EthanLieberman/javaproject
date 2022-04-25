@@ -15,7 +15,16 @@
 </head>
 <body>
 <h1>Shopping bag</h1>
+
+<form action="/cart/4" method="post">
+<input type="hidden" name="_method" value="put">
+<input type="submit" value="add to cart">
+</form>
+
 ${cart.products}
+<c:forEach items="${cart.products}" var="i">
+${i.name}
+</c:forEach>
 
 </body>
 </html>

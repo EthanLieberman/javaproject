@@ -1,22 +1,21 @@
 package com.ethan.javaproject.models;
 
-import java.util.List;
+import java.util.ArrayList;
 
 
 public class Cart {
 	
 	
-	private List<Product> products;
+	private ArrayList<Product> products = new ArrayList<Product>();
 	
 	public Cart() {}
 
-	public List<Product> getProducts() {
+	public ArrayList<Product> getProducts() {
 		return products;
 	}
 
-	public void setProducts(List<Product> products) {
+	public void setProducts(ArrayList<Product> products) {
 		this.products = products;
 	}
 
-	
 }
