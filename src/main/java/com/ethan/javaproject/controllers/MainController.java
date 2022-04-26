@@ -63,6 +63,21 @@ public class MainController {
 		return "category.jsp";
 	}
 	
+//	about page
+	@GetMapping("/about")
+	public String about() {
+		return "about.jsp";
+	}
+	
+	
+//	contact page
+	@GetMapping("/contact")
+	public String contact() {
+		return "contact.jsp";
+	}
+	
+//	
+	
 	
 	
 //	User session shopping cart

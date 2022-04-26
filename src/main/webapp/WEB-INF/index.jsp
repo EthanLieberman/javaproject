@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>B&W</title>
+<title>BLack && White</title>
 <link rel="stylesheet"
 	href="/webjars/bootstrap/5.0.1/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -30,7 +30,8 @@
 	</div>
 
 	<!-- <a href="/logout">Logout</a> -->
-	<img class="logo" src="/image/BW.png" alt="logo" />
+	<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+	
 
 	<div class="search">
 		<a style="font-family: arvo; font-size: 10pt; color: black;"
@@ -54,18 +55,18 @@
 			<li><a href="/">Home</a></li>
 			<li><a href="#">Women</a>
 				<ul class="dropdown-content">
-					<li style="font-family: arvo;"><a href="/category/dresses">dresses</a></li>
-					<li style="font-family: arvo;"><a href="/">gold</a></li>
-					<li style="font-family: arvo;"><a href="/">diamonds</a></li>
+					<li style="font-family: arvo;"><a href="/category/dresses">Dresses</a></li>
+					<li style="font-family: arvo;"><a href="/category/">gold</a></li>
+					<li style="font-family: arvo;"><a href="/category/">diamonds</a></li>
 				</ul></li>
 			<li><a href="#">Men</a>
 				<ul class="dropdown-content">
-					<li style="font-family: arvo;"><a href="/">Black</a></li>
-					<li style="font-family: arvo;"><a href="/">Gold</a></li>
-					<li style="font-family: arvo;"><a href="/">White</a></li>
+					<li style="font-family: arvo;"><a href="/category/">Black</a></li>
+					<li style="font-family: arvo;"><a href="/category/">Gold</a></li>
+					<li style="font-family: arvo;"><a href="/category/">White</a></li>
 				</ul></li>
-			<li><a href="#">About</a>
-			<li><a href="#">Contact</a>
+			<li><a href="/about">About</a>
+			<li><a href="/contact">Contact</a>
 		</ul>
 		<!-- image -->
 		<div class="image">
