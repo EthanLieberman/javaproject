@@ -30,7 +30,9 @@
 	</div>
 
 	<!-- <a href="/logout">Logout</a> -->
+	<div class="logoContainer">
 	<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+	</div>
 	
 
 	<div class="search">
@@ -39,7 +41,7 @@
 			
 			<form action="/searchRequest" method="post">
 			<input type="search" id="search" placeholder="search for products" name="search">
-			<input type="submit" value="Search">
+			<input class="button" type="submit" value="Search">
 			</form>
 
 	</div>
@@ -49,7 +51,7 @@
 
 	<%-- <p>Hi ${userName}</p> --%>
 
-
+<div class="center">
 	<div class="dropdown">
 		<ul class="menu">
 			<li><a href="/">Home</a></li>
@@ -65,16 +67,23 @@
 					<li style="font-family: arvo;"><a href="/category/">Gold</a></li>
 					<li style="font-family: arvo;"><a href="/category/">White</a></li>
 				</ul></li>
+				<li><a href="#">Accesories</a>
+				<ul class="dropdown-content">
+					<li style="font-family: arvo;"><a href="/category/dresses">Women</a></li>
+					<li style="font-family: arvo;"><a href="/category/">Men</a></li>
+					<li style="font-family: arvo;"><a href="/category/">Misc</a></li>
+				</ul></li>
 			<li><a href="/about">About</a>
-			<li><a href="/contact">Contact</a>
 		</ul>
+		</div>
+	
+	</div>
 		<!-- image -->
 		<div class="image">
 			<img class="image"
 				src="https://images.pexels.com/photos/3352398/pexels-photo-3352398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 				alt="logo" />
 		</div>
-	</div>
 
 
 	<!--carousel-->
@@ -86,14 +95,55 @@
 
 	<%-- ${cart} --%>
 	<!-- footer -->
+	<!-- footer -->
 	<footer>
-	
-		<ul class="footer">
-			<li>Black&White © B&W. All rights reserved.</li>
-			<li>contact us</li>
-			<li>privacy & concern</li>
-			<li>privacy & concern</li>
-		</ul>
+		<div class="footer">
+			<div class="contain">
+				<h3 class="text-center">Black&&White © B&W. All rights reserved</h3>
+
+				<div class="col">
+					<h1>Company</h1>
+					<ul>
+						<li><a href="/about">About Us</a></li>
+						<li>Press Releases</li>
+						<li>Social Blogs</li>
+						<li>Get in touch</li>
+					</ul>
+				</div>
+
+				<div class="col">
+					<h1>Customer Service</h1>
+					<ul>
+						<li><a href="/contact">Contact Us</a></li>
+						<li>Order Status</li>
+						<li>Shipping/Handling</li>
+						<li>Return Policy</li>
+						<li>FAQ</li>
+					</ul>
+				</div>
+
+				<div class="col">
+					<h1>Legal</h1>
+					<ul>
+						<li>Terms Conditions</li>
+						<li>Privacy and Safely</li>
+					</ul>
+				</div>
+				<div class="col social ">
+					<h1>Social</h1>
+					<ul>
+						<li><img src="https://svgshare.com/i/5fq.svg" width="32"
+							style="width: 32px;"></li>
+						<li><img src="https://svgshare.com/i/5eA.svg" width="32"
+							style="width: 32px;"></li>
+						<li><img src="https://svgshare.com/i/5f_.svg" width="32"
+							style="width: 32px;"></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
 	</footer>
 
 </body>
