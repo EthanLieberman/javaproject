@@ -26,18 +26,14 @@
 <body>
 
 	<div class="commercial">
-		25% off today. Pick up available. <a href="/" style="color: white;">Options</a>
+		<div>
+			25% off today. Pick up available. <a href="/" style="color: white;">Options</a>
+		</div>
 	</div>
 
 	<!-- <a href="/logout">Logout</a> -->
-	<img class="logo" src="/image/BW.png" alt="logo" />
-
-	<div class="search">
-		<a style="font-family: arvo; font-size: 10pt; color: black;"
-			href="/enter">Sign In</a> <label for="search"></label> <input
-			type="search" id="search" placeholder="search for products"
-			name="search">
-
+	<div class="logoContainer">
+		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
 	</div>
 
 
@@ -46,28 +42,36 @@
 	<%-- <p>Hi ${userName}</p> --%>
 
 
-	<div class="dropdown">
-		<ul class="menu">
-			<li><a href="/">Home</a></li>
-			<li><a href="#">Women</a>
-				<ul class="dropdown-content">
-					<li style="font-family: arvo;"><a href="/category/dresses">dresses</a></li>
-					<li style="font-family: arvo;"><a href="/">gold</a></li>
-					<li style="font-family: arvo;"><a href="/">diamonds</a></li>
-				</ul></li>
-			<li><a href="#">Men</a>
-				<ul class="dropdown-content">
-					<li style="font-family: arvo;"><a href="/">Black</a></li>
-					<li style="font-family: arvo;"><a href="/">Gold</a></li>
-					<li style="font-family: arvo;"><a href="/">White</a></li>
-				</ul></li>
-			<li><a href="#">About</a>
-			<li><a href="#">Contact</a>
-		</ul>
+	<div class="center">
+		<div class="dropdown">
+			<ul class="menu">
+				<li><a href="/">Home</a></li>
+				<li><a href="#">Women</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/dresses">Dresses</a></li>
+						<li style="font-family: arvo;"><a href="/category/">gold</a></li>
+						<li style="font-family: arvo;"><a href="/category/">diamonds</a></li>
+					</ul></li>
+				<li><a href="#">Men</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/">Black</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Gold</a></li>
+						<li style="font-family: arvo;"><a href="/category/">White</a></li>
+					</ul></li>
+				<li><a href="#">Accesories</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/dresses">Women</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Men</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Misc</a></li>
+					</ul></li>
+				<li><a href="/about">About</a>
+			</ul>
+		</div>
 
 	</div>
 
-	<div style="display: flex; justify-content: center; padding: 2%; flex-direction: row-reverse;">
+	<div
+		style="display: flex; justify-content: center; padding: 2%; flex-direction: row-reverse;">
 		<div class="register">
 			<h3>Sign Up</h3>
 			<form:form action="/register" method="post" modelAttribute="newUser">
@@ -113,7 +117,7 @@
 		<div>
 			<h3>Sign In</h3>
 			<form:form action="/login" method="post" modelAttribute="newLogin">
-					<div>
+				<div>
 					Email:
 					<form:label path="email" for="floatingInput">
 					</form:label>
@@ -121,7 +125,7 @@
 					<form:input path="email" class="form-control form-control-sm"
 						type="text" aria-label=".form-control-sm" />
 				</div>
-			<div>
+				<div>
 					Password:
 					<form:label path="password" for="floatingInput">
 					</form:label>
@@ -129,7 +133,7 @@
 					<form:input path="password" class="form-control form-control-sm"
 						type="text" aria-label=".form-control-sm" />
 				</div>
-			
+
 				<input class="button" type="submit" value="Submit" />
 			</form:form>
 		</div>
@@ -138,13 +142,13 @@
 	<!-- footer -->
 	<footer>
 		<div class="footer">
-			<div class="contain">
-				<h3 class="text-center">Black&&White © B&W. All rights reserved</h3>
+			<h3 class="text-center">Black&&White © B&W. All rights reserved</h3>
+			<div class="contain" style="display: flex; justify-content: center;">
 
 				<div class="col">
 					<h1>Company</h1>
 					<ul>
-						<li>About Us</li>
+						<li><a href="/about">About Us</a></li>
 						<li>Press Releases</li>
 						<li>Social Blogs</li>
 						<li>Get in touch</li>
@@ -154,7 +158,7 @@
 				<div class="col">
 					<h1>Customer Service</h1>
 					<ul>
-						<li>Contact Us</li>
+						<li><a href="/contact">Contact Us</a></li>
 						<li>Order Status</li>
 						<li>Shipping/Handling</li>
 						<li>Return Policy</li>
@@ -169,14 +173,14 @@
 						<li>Privacy and Safely</li>
 					</ul>
 				</div>
-				<div class="col social ">
+				<div class="col social">
 					<h1>Social</h1>
-					<ul>
-						<li><img src="https://svgshare.com/i/5fq.svg" width="32"
+					<ul style="display: flex; justify-content: center;">
+						<li><img src="/image/fblogo.png" width="32"
 							style="width: 32px;"></li>
-						<li><img src="https://svgshare.com/i/5eA.svg" width="32"
+						<li><img src="/image/iglogo.png" width="32"
 							style="width: 32px;"></li>
-						<li><img src="https://svgshare.com/i/5f_.svg" width="32"
+						<li><img src="/image/twitterlogo.png" width="32"
 							style="width: 32px;"></li>
 					</ul>
 				</div>

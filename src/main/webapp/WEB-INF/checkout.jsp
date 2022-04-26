@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Shopping Bag</title>
+<title>Checkout</title>
 <link rel="stylesheet"
 	href="/webjars/bootstrap/5.0.1/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -31,19 +31,7 @@
 		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
 	</div>
 
-	<h1>Shopping bag</h1>
-
-	<form action="/cart/4" method="post">
-		<input type="hidden" name="_method" value="put"> <input
-			type="submit" value="add to cart">
-	</form>
-
-	${cart.products}
-	<c:forEach items="${cart.products}" var="i">
-${i.name}
-</c:forEach>
-
-
+	<form action="/checkoutProcess"></form>
 
 	<!-- footer -->
 	<footer>
