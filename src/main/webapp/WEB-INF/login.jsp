@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<div class="commercial">
+	<div class="commercial">
 		25% off today. Pick up available. <a href="/" style="color: white;">Options</a>
 	</div>
 
@@ -64,66 +64,127 @@
 			<li><a href="#">About</a>
 			<li><a href="#">Contact</a>
 		</ul>
-	
+
 	</div>
 
-	<div style="display: flex;" class="register">
+	<div style="display: flex; justify-content: center; padding: 2%; flex-direction: row-reverse;">
 		<div class="register">
-			<h3>Register</h3>
+			<h3>Sign Up</h3>
 			<form:form action="/register" method="post" modelAttribute="newUser">
-				<p>
-					<form:label path="userName">UserName</form:label>
-					<form:errors path="userName"  style="color: red;"/>
-					<form:input path="userName" />
+				<div>
+					Profile Name:
+					<form:label path="userName" for="floatingInput">
+					</form:label>
+					<form:errors style="color: red;" path="userName" />
+					<form:input path="userName" class="form-control form-control-sm"
+						type="text" aria-label=".form-control-sm" />
+				</div>
+				<div>
+					Email:
+					<form:label path="email" for="floatingInput">
+					</form:label>
+					<form:errors style="color: red;" path="email" />
+					<form:input path="email" class="form-control form-control-sm"
+						type="text" aria-label=".form-control-sm" />
+				</div>
 
-				</p>
-				<p>
-					<form:label path="email">Email</form:label>
-					<form:errors path="email" style="color: red;" />
-					<form:input path="email" />
-				</p>
-				<p>
-					<form:label path="password">Password</form:label>
-					<form:errors path="password" style="color: red;" />
-					<form:password path="password" />
-				</p>
-				<p>
-					<form:label path="confirm">Confirm Password</form:label>
-					<form:errors path="confirm"  style="color: red;" />
-					<form:password path="confirm" />
-				</p>
+				<div>
+					Password:
+					<form:label path="password" for="floatingInput">
+					</form:label>
+					<form:errors style="color: red;" path="password" />
+					<form:input path="password" class="form-control form-control-sm"
+						type="text" aria-label=".form-control-sm" />
+				</div>
+				<div>
+					Confirm Password:
+					<form:label path="confirm" for="floatingInput">
+					</form:label>
+					<form:errors style="color: red;" path="confirm" />
+					<form:input path="confirm" class="form-control form-control-sm"
+						type="text" aria-label=".form-control-sm" />
+				</div>
 
-				<input type="submit" value="Submit" />
+				<input class="button" type="submit" value="Submit" />
 			</form:form>
 
 		</div>
 
 		<div>
-			<h3>Log In</h3>
+			<h3>Sign In</h3>
 			<form:form action="/login" method="post" modelAttribute="newLogin">
-				<p>
-					<form:label path="email">Email</form:label>
-					<form:errors path="email"  style="color: red;"/>
-					<form:input path="email" />
-				</p>
-				<p>
-					<form:label path="password">Password</form:label>
-					<form:errors path="password"  style="color: red;"/>
-					<form:password path="password" />
-				</p>
-				<input type="submit" value="Submit" />
+					<div>
+					Email:
+					<form:label path="email" for="floatingInput">
+					</form:label>
+					<form:errors style="color: red;" path="email" />
+					<form:input path="email" class="form-control form-control-sm"
+						type="text" aria-label=".form-control-sm" />
+				</div>
+			<div>
+					Password:
+					<form:label path="password" for="floatingInput">
+					</form:label>
+					<form:errors style="color: red;" path="password" />
+					<form:input path="password" class="form-control form-control-sm"
+						type="text" aria-label=".form-control-sm" />
+				</div>
+			
+				<input class="button" type="submit" value="Submit" />
 			</form:form>
 		</div>
-	<footer>
-	
-		<ul class="footer">
-			<li>Black&White © B&W. All rights reserved.</li>
-			<li>contact us</li>
-			<li>privacy & concern</li>
-			<li>privacy & concern</li>
-		</ul>
-	</footer>
 
 	</div>
+	<!-- footer -->
+	<footer>
+		<div class="footer">
+			<div class="contain">
+				<h3 class="text-center">Black&&White © B&W. All rights reserved</h3>
+
+				<div class="col">
+					<h1>Company</h1>
+					<ul>
+						<li>About Us</li>
+						<li>Press Releases</li>
+						<li>Social Blogs</li>
+						<li>Get in touch</li>
+					</ul>
+				</div>
+
+				<div class="col">
+					<h1>Customer Service</h1>
+					<ul>
+						<li>Contact Us</li>
+						<li>Order Status</li>
+						<li>Shipping/Handling</li>
+						<li>Return Policy</li>
+						<li>FAQ</li>
+					</ul>
+				</div>
+
+				<div class="col">
+					<h1>Legal</h1>
+					<ul>
+						<li>Terms Conditions</li>
+						<li>Privacy and Safely</li>
+					</ul>
+				</div>
+				<div class="col social ">
+					<h1>Social</h1>
+					<ul>
+						<li><img src="https://svgshare.com/i/5fq.svg" width="32"
+							style="width: 32px;"></li>
+						<li><img src="https://svgshare.com/i/5eA.svg" width="32"
+							style="width: 32px;"></li>
+						<li><img src="https://svgshare.com/i/5f_.svg" width="32"
+							style="width: 32px;"></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+	</footer>
+
 </body>
 </html>
