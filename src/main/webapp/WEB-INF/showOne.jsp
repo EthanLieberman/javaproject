@@ -15,7 +15,7 @@
 <title>One Item</title>
 <link rel="stylesheet"
 	href="/webjars/bootstrap/5.0.1/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/showone.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,13 +27,115 @@
 </head>
 <body>
 
+<div class="commercial">
+		<div>
+			25% off today. Pick up available. <a href="/" style="color: white;">Options</a>
+		</div>
+	</div>
+
 	<div class="logoContainer">
 		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
 	</div>
+	
+	<div class="search">
+		<form action="/searchRequest" method="post">
+			<input type="search" id="search" placeholder="search for products"
+				name="search"> <input class="button" type="submit"
+				value="Search">
+		</form>
 
-	<h1>one Item</h1>
+	</div>
+	
+	<div class="center">
+		<div class="dropdown">
+			<ul class="menu">
+				<li><a href="/">Home</a></li>
+				<li><a href="#">Women</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/dresses">Dresses</a></li>
+						<li style="font-family: arvo;"><a href="/category/">gold</a></li>
+						<li style="font-family: arvo;"><a href="/category/">diamonds</a></li>
+					</ul></li>
+				<li><a href="#">Men</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/">Black</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Gold</a></li>
+						<li style="font-family: arvo;"><a href="/category/">White</a></li>
+					</ul></li>
+				<li><a href="#">Accesories</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/dresses">Women</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Men</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Misc</a></li>
+					</ul></li>
+				<li><a href="/about">About</a>
+			</ul>
+		</div>
 
-	${product}
+	</div>
+	
+
+
+	<div
+		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
+
+		<a href="/cart"><img alt="cart" src="/image/shoppingbag.png"
+			height="25px"> <c:out value="${cart.products.size()}" /></a>
+
+		<%-- <c:if test="${userId}">
+			<a
+				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
+				href="/enter">Sign Out</a>
+		</c:if>
+		<c:if test="${!userId}">
+			<a
+				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
+				href="/enter">Sign In</a>
+		</c:if>
+ --%>
+
+	</div>
+
+<div class="productContainer">
+
+<div class="imageContainer">
+<img class="productImage" src="${product.url}" alt="wedding dress"/>
+</div>
+<div class="descriptionContainer">
+<h4 style="font-family: arvo;">${product.name}</h4>
+<br>
+<h5 style="font-weight: bold">$${product.price}</h5>
+<br>
+<p>"insert icon here"</p>
+<p>Free Shipping</p>
+<br>
+<p>${product.description}</p>
+<br>
+<p>Choose your size:</p>
+<form action="/addtobag" method="post">
+<select class="form-select form-select-sm" name="size">
+ <option selected="size">Size</option>
+    <option>00</option>
+    <option>0</option>
+    <option>2</option>
+    <option>4</option>
+    <option>6</option>
+    <option>8</option>
+    <option>10</option>
+    <option>12</option>
+    <option>14</option>
+    <option>16</option>
+    <option>18</option>
+</select>
+<input class="button2" type="submit" value="Add to Bag" />
+
+</form>
+
+</div>
+
+
+</div>
+	
 
 
 

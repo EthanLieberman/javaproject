@@ -153,24 +153,23 @@
 						class="d-block w-100" alt="Slide 1">
 					<div class="carousel-caption d-none d-sm-block">
 						<h5 style="color: black; font-family: arvo;">Call us Today</h5>
-						<p style="color: black;">No appointments necessary</p>
+						<p style="color: black;">One on one consulting</p>
 					</div>
 				</div>
 				<div class="carousel-item active">
 					<img src="https://images.pexels.com/photos/3342697/pexels-photo-3342697.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 						class="d-block w-100" alt="Slide 2">
 					<div class="carousel-caption d-none d-sm-block">
-						<h5 style="color: black; font-family: arvo;">Second slide label</h5>
-						<p style="color: black;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<h5 style="color: black; font-family: arvo;">Subscribe to our mailing address</h5>
+						<p style="color: black;">Discounts and promotions with subscription</p>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<img src="https://images.pexels.com/photos/2122361/pexels-photo-2122361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 						class="d-block w-100" alt="Slide 3">
 					<div class="carousel-caption d-none d-sm-block">
-						<h5 style="color: black; font-family: arvo;">Third slide label</h5>
-						<p style="color: black;">Praesent commodo cursus magna, vel scelerisque nisl
-							consectetur.</p>
+						<h5 style="color: black; font-family: arvo;">Personalized Wedding Quotes</h5>
+						<p style="color: black;">Make your dream come true today</p>
 					</div>
 				</div>
 			</div>
