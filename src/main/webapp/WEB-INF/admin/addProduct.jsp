@@ -39,12 +39,15 @@
 				<form:label path="category">Category</form:label>
 				<form:errors path="category" />
 				<form:select path="category">
-					<form:option value="Suits" />
-					<form:option value="Dresses" />
-					<form:option value="Tops" />
-					<form:option value="Skirts" />
-					<form:option value="Test" />
-					<form:option value="Test" />
+					<form:option value="Wedding Dresses" />
+					<form:option value="Bridesmaid Dresses" />
+					<form:option value="Mother of Bride and Groom" />
+					<form:option value="Tuxedos" />
+					<form:option value="Formal Suits" />
+					<form:option value="Ties" />
+					<form:option value="Tiara" />
+					<form:option value="Veils" />
+					<form:option value="Jewelry" />
 				</form:select>
 			</p>
 			<p>

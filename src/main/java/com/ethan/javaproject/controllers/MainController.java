@@ -85,14 +85,26 @@ public class MainController {
 	}
 
 //	Button to add items to cart
-	@PutMapping("/cart/{id}")
-	public String cart(Model model, HttpSession session, @PathVariable("id") Long id) {
+	@PostMapping("/addtocart/{id}")
+	public String addtocart(Model model, HttpSession session, @PathVariable("id") Long id) {
 		Cart cart = (Cart) session.getAttribute("cart");
 		Product object = productService.findProduct(id);
 		cart.getProducts().add(object);
 		session.setAttribute("cart", cart);
+		return "redirect:/category/"+ object.getCategory() + "/" + object.getId();
+	}
+	
+	@PostMapping("/removefromcart/{idx}")
+	public String removefromcart(Model model, HttpSession session, @PathVariable("idx") int idx) {
+		Cart cart = (Cart) session.getAttribute("cart");
+		cart.getProducts().remove(idx);
+		System.out.println(idx);
+		System.out.println("remove");
+		session.setAttribute("cart", cart);
 		return "redirect:/cart";
 	}
+	
+	
 
 	@GetMapping("/checkout")
 	public String checkout(@ModelAttribute("checkout") Checkout checkout) {

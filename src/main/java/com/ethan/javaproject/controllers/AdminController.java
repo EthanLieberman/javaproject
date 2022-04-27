@@ -2,6 +2,7 @@ package com.ethan.javaproject.controllers;
 
 import java.util.List;
 
+import javax.servlet.annotation.HttpConstraint;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -135,4 +136,16 @@ public class AdminController {
 		productService.delete(id);
 		return "redirect:/adminportal";
 	}
+
+// ------Easter--------
+	@GetMapping("/pandafy")
+	public String pandafy(HttpSession session) {
+		Boolean panda = (Boolean) session.getAttribute("panda");
+		if(!panda) {
+			session.setAttribute("panda", true);
+		} else session.setAttribute("panda", false);
+		
+		return "redirect:/";
+	}
+	
 }

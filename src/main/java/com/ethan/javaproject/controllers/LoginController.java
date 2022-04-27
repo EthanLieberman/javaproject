@@ -102,6 +102,10 @@ public class LoginController {
 
 	@GetMapping("/")
 	String home(HttpSession session, Model model){
+		if (session.getAttribute("panda") == null) {
+			session.setAttribute("panda", false);
+		}
+		
 		if (session.getAttribute("cart") == null){
 			Cart cart = new Cart();
 			session.setAttribute("cart", cart);
