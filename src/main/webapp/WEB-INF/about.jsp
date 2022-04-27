@@ -47,7 +47,7 @@
 	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
 
-		<a href="/cart"><img alt="cart" src="/image/shoppingbag.png"
+		<a href="/bag"><img alt="bag" src="/image/shoppingbag.png"
 			height="25px"> <c:out value="${cart.products.size()}" /></a>
 
 		<c:if test="${userId != null}">

@@ -27,16 +27,37 @@
 </head>
 <body>
 
-<div class="commercial">
+	<div class="commercial">
 		<div>
 			25% off today. Pick up available. <a href="/" style="color: white;">Options</a>
 		</div>
 	</div>
 
+	<div
+		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
+
+		<a href="/cart"><img alt="cart" src="/image/shoppingbag.png"
+			height="25px"> <c:out value="${cart.products.size()}" /></a>
+
+		<c:if test="${userId != null}">
+			<a
+				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
+				href="/logout">Sign Out</a>
+		</c:if>
+		<c:if test="${userId == null}">
+			<a
+				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
+				href="/enter">Sign In</a>
+		</c:if>
+
+
+	</div>
+
+
 	<div class="logoContainer">
 		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
 	</div>
-	
+
 	<div class="search">
 		<form action="/searchRequest" method="post">
 			<input type="search" id="search" placeholder="search for products"
@@ -45,7 +66,7 @@
 		</form>
 
 	</div>
-	
+
 	<div class="center">
 		<div class="dropdown">
 			<ul class="menu">
@@ -73,13 +94,13 @@
 		</div>
 
 	</div>
-	
+
 
 
 	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
 
-		<a href="/cart"><img alt="cart" src="/image/shoppingbag.png"
+		<a href="cart"><img alt="cart" src="/image/shoppingbag.png"
 			height="25px"> <c:out value="${cart.products.size()}" /></a>
 
 		<%-- <c:if test="${userId}">
@@ -96,50 +117,46 @@
 
 	</div>
 
-<div class="productContainer">
+	<div class="productContainer">
 
-<div class="imageContainer">
-<img class="productImage" src="${product.url}" alt="wedding dress"/>
-</div>
-<div class="descriptionContainer">
-<h4 style="font-family: arvo;">${product.name}</h4>
-<br>
-<h5 style="font-weight: bold">$${product.price}</h5>
-<br>
-<p>"insert icon here"</p>
-<p>Free Shipping</p>
-<br>
-<p>${product.description}</p>
-<br>
-<hr style="color: black; opacity: .5;"/>
-<p>Choose your size:</p>
-<form action="/addtobag" method="post">
-<select class="form-select form-select-sm" name="size">
- <option selected="size">Size</option>
-    <option>00</option>
-    <option>0</option>
-    <option>2</option>
-    <option>4</option>
-    <option>6</option>
-    <option>8</option>
-    <option>10</option>
-    <option>12</option>
-    <option>14</option>
-    <option>16</option>
-    <option>18</option>
-</select>
-<div>
-<label for="quantity">Quantity:</label>
-  <input type="number" style="margin-top: 2%;" id="quantity" name="quantity" min="1" max="5">
-  </div>
-<input class="button2" type="submit" value="Add to Bag" />
+		<div class="imageContainer">
+			<img class="productImage" src="${product.url}" alt="wedding dress" />
+		</div>
+		<div class="descriptionContainer">
+			<h4 style="font-family: arvo;">${product.name}</h4>
+			<br>
+			<h5 style="font-weight: bold">$${product.price}</h5>
+			<br>
+			<p>
+				<img alt="shippingimage" src="/image/shipping.png" width="50px">
+			</p>
+			<p>Free Shipping</p>
+			<br>
+			<p>${product.description}</p>
+			<br>
+			<p>Choose your size:</p>
+			<form action="/addtocart/${product.id}" method="post">
+				<select class="form-select form-select-sm" name="size">
+					<option selected="size">Size</option>
+					<option>00</option>
+					<option>0</option>
+					<option>2</option>
+					<option>4</option>
+					<option>6</option>
+					<option>8</option>
+					<option>10</option>
+					<option>12</option>
+					<option>14</option>
+					<option>16</option>
+					<option>18</option>
+				</select> <input class="button2" type="submit" value="Add to Bag" />
 
-</form>
+			</form>
 
-</div>
+		</div>
 
 
-</div>
+	</div>
 
 
 

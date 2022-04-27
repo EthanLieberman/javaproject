@@ -103,6 +103,7 @@
 
 	</div>
 	<div class="coverImage">
+
 		<img class="firstDress"
 			src="https://images.unsplash.com/photo-1502727135886-df285cc8379f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
 			alt="wedding dresses" /> <img class="secondDress"
@@ -131,7 +132,15 @@
 
 
 
+<div class="dressesContainer">
+	<c:forEach items="${products }" var="i">
+	<img class ="allDresses" src="${i.url}" alt="product1"/>
+<p  class="dressname" style="margin-top: .5%;">${i.name}</p>
 
+<p>$${i.price}</p>
+
+</c:forEach>
+</div>
 
 
 	<!-- footer -->

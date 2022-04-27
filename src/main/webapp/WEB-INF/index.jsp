@@ -58,7 +58,13 @@
 
 	<!-- <a href="/logout">Logout</a> -->
 	<div class="logoContainer">
-		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+		<c:if test="${panda}">
+			<a href="/"><img class="logo" src="/image/panda.png" alt="logo" /></a>
+		</c:if>
+		<c:if test="${!panda}">
+			<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+		</c:if>
+
 	</div>
 
 	<div class="search">
@@ -81,21 +87,21 @@
 				<li><a href="/">Home</a></li>
 				<li><a href="#">Women</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/dresses">Wedding Dresses</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Bridesmaid Dresses</a></li>
-						
+						<li style="font-family: arvo;"><a href="/category/dresses">Dresses</a></li>
+						<li style="font-family: arvo;"><a href="/category/">gold</a></li>
+						<li style="font-family: arvo;"><a href="/category/">diamonds</a></li>
 					</ul></li>
 				<li><a href="#">Men</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/">Tuxedos</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Suits</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Black</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Gold</a></li>
+						<li style="font-family: arvo;"><a href="/category/">White</a></li>
 					</ul></li>
 				<li><a href="#">Accessories</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/dresses">Veils</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Jewelry</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Tiaras</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Ties</a></li>
+						<li style="font-family: arvo;"><a href="/category/dresses">Women</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Men</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Misc</a></li>
 					</ul></li>
 				<li><a href="/about">About</a>
 			</ul>
@@ -111,7 +117,7 @@
 
 	<div class="center" style="margin: 20px; font-style: italic;">
 		“Walking with your hands in mine and mine in yours, that's exactly
-		where I want to be always.""</div>
+		where I want to be always."</div>
 
 
 	<!--carousel-->
@@ -149,7 +155,8 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item">
-					<img src="https://images.pexels.com/photos/265720/pexels-photo-265720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+					<img
+						src="https://images.pexels.com/photos/265720/pexels-photo-265720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 						class="d-block w-100" alt="Slide 1">
 					<div class="carousel-caption d-none d-sm-block">
 						<h5 style="color: black; font-family: arvo;">Call us Today</h5>
@@ -157,18 +164,23 @@
 					</div>
 				</div>
 				<div class="carousel-item active">
-					<img src="https://images.pexels.com/photos/3342697/pexels-photo-3342697.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+					<img
+						src="https://images.pexels.com/photos/3342697/pexels-photo-3342697.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 						class="d-block w-100" alt="Slide 2">
 					<div class="carousel-caption d-none d-sm-block">
-						<h5 style="color: black; font-family: arvo;">Subscribe to our mailing address</h5>
-						<p style="color: black;">Discounts and promotions with subscription</p>
+						<h5 style="color: black; font-family: arvo;">Subscribe to our
+							mailing address</h5>
+						<p style="color: black;">Discounts and promotions with
+							subscription</p>
 					</div>
 				</div>
 				<div class="carousel-item">
-					<img src="https://images.pexels.com/photos/2122361/pexels-photo-2122361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+					<img
+						src="https://images.pexels.com/photos/2122361/pexels-photo-2122361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 						class="d-block w-100" alt="Slide 3">
 					<div class="carousel-caption d-none d-sm-block">
-						<h5 style="color: black; font-family: arvo;">Personalized Wedding Quotes</h5>
+						<h5 style="color: black; font-family: arvo;">Personalized
+							Wedding Quotes</h5>
 						<p style="color: black;">Make your dream come true today</p>
 					</div>
 				</div>
