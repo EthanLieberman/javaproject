@@ -111,6 +111,7 @@
 <br>
 <p>${product.description}</p>
 <br>
+<hr style="color: black; opacity: .5;"/>
 <p>Choose your size:</p>
 <form action="/addtobag" method="post">
 <select class="form-select form-select-sm" name="size">
@@ -128,7 +129,7 @@
     <option>18</option>
 </select>
 <div>
-<label for="quantity">Quanity:</label>
+<label for="quantity">Quantity:</label>
   <input type="number" style="margin-top: 2%;" id="quantity" name="quantity" min="1" max="5">
   </div>
 <input class="button2" type="submit" value="Add to Bag" />
@@ -139,7 +140,7 @@
 
 
 </div>
-	
+
 
 
 

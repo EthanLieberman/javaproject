@@ -81,21 +81,21 @@
 				<li><a href="/">Home</a></li>
 				<li><a href="#">Women</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/dresses">Dresses</a></li>
-						<li style="font-family: arvo;"><a href="/category/">gold</a></li>
-						<li style="font-family: arvo;"><a href="/category/">diamonds</a></li>
+						<li style="font-family: arvo;"><a href="/category/dresses">Wedding Dresses</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Bridesmaid Dresses</a></li>
+						
 					</ul></li>
 				<li><a href="#">Men</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/">Black</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Gold</a></li>
-						<li style="font-family: arvo;"><a href="/category/">White</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Tuxedos</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Suits</a></li>
 					</ul></li>
-				<li><a href="#">Accesories</a>
+				<li><a href="#">Accessories</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/dresses">Women</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Men</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Misc</a></li>
+						<li style="font-family: arvo;"><a href="/category/dresses">Veils</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Jewelry</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Tiaras</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Ties</a></li>
 					</ul></li>
 				<li><a href="/about">About</a>
 			</ul>
