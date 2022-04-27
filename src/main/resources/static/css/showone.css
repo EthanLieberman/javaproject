@@ -36,22 +36,28 @@
 }
 .dressesContainer{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	padding: 3%;
-
 	justify-content: center;
 	flex-wrap: wrap;
 	width: 100%;
 	gap:  6%;
 	
-
-
 }
 .allDresses{
 	width: 350px;
 	height: 500px;
 	object-fit:cover;
+	margin-top: 4%;
 }
+
+/* .textDisplay{
+	
+	border: red 2px solid;
+	width: 300px;
+	height: fit-content;
+	
+} */
 
 .dressname{
 	font-family: arvo;
@@ -210,7 +216,6 @@ ul li ul li a {
 
 /* <!--footer--> */
 .footer {
-	padding-top: 15px;
 	margin-top: 20px;
 	width: 100%;
 	position: relative;
@@ -328,3 +333,5 @@ ul li ul li a {
 		width: 100%;
 	}
 }
+
+
