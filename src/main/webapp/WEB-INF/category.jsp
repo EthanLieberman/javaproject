@@ -103,10 +103,34 @@
 
 	</div>
 	<div class="coverImage">
-	<img  class="firstDress" src="https://images.unsplash.com/photo-1502727135886-df285cc8379f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="wedding dresses"/>
-		<img  class="secondDress" src="https://images.unsplash.com/photo-1534875756527-5e8e4392005f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=732&q=80" alt="wedding dresses"/>
-		</div>
-	<h4 style="padding: .7%;">Women's Wedding Dresses</h4>
+
+		<img class="firstDress"
+			src="https://images.unsplash.com/photo-1502727135886-df285cc8379f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+			alt="wedding dresses" /> <img class="secondDress"
+			src="https://images.unsplash.com/photo-1534875756527-5e8e4392005f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=732&q=80"
+			alt="wedding dresses" /> <img class="secondDress"
+			src="https://images.unsplash.com/photo-1523264058183-49ea5572cdf4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+			alt="wedding dresses" />
+	</div>
+
+	<h3 style="padding: .7%; margin-left: 5%; font-family: arvo;">Wedding</h3>
+	<div class="dressesContainer">
+		<c:forEach items="${products }" var="i">
+
+			<div>
+				<a style="color: black;" href="/category/${i.category}/${i.id}"> 
+				<img class="allDresses" src="${i.url}" alt="product1" />
+					<p class="dressname" style="margin-top: .8%;">${i.name}</p>
+					</a>
+
+				<p>$${i.price}</p>
+			</div>
+		</c:forEach>
+	</div>
+
+
+
+
 
 <div class="dressesContainer">
 	<c:forEach items="${products }" var="i">
