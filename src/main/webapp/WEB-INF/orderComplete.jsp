@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>One Item</title>
+<title>Insert title here</title>
 <link rel="stylesheet"
 	href="/webjars/bootstrap/5.0.1/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -25,20 +25,53 @@
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
+
+<meta charset="UTF-8">
+<title>Order Complete</title>
+<link rel="stylesheet"
+	href="/webjars/bootstrap/5.0.1/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+	rel="stylesheet">
+</head>
 <body>
+
+	<div
+		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
+
+		<a href="/cart"><img alt="cart" src="/image/shoppingbag.png"
+			height="25px"> <c:out value="${cart.products.size()}" /></a>
+
+		<c:if test="${userId != null}">
+			<a
+				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
+				href="/enter">Sign Out</a>
+		</c:if>
+		<c:if test="${userId == null}">
+			<a
+				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
+				href="/enter">Sign In</a>
+		</c:if>
+
+
+	</div>
 
 	<div class="logoContainer">
 		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
 	</div>
 
-	<h1>one Item</h1>
 
-	${product}
+	<div class="center">
+		<div style="background-color: gray; width: 500px; display: flex; justify-content: center;">
+			<h5>Order Number: xxxxxxxxxx</h5>
+		</div>
+	</div>
 
 
 
 
-	<!-- footer -->
+
 	<footer>
 		<div class="footer">
 			<h3 class="text-center">Black&&White © B&W. All rights reserved</h3>
@@ -88,5 +121,6 @@
 		</div>
 
 	</footer>
+
 </body>
 </html>

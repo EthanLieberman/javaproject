@@ -33,19 +33,18 @@
 		</div>
 	</div>
 
-
 	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
 
 		<a href="/cart"><img alt="cart" src="/image/shoppingbag.png"
 			height="25px"> <c:out value="${cart.products.size()}" /></a>
 
-		<c:if test="${userId}">
+		<c:if test="${userId != null}">
 			<a
 				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
 				href="/enter">Sign Out</a>
 		</c:if>
-		<c:if test="${!userId}">
+		<c:if test="${userId == null}">
 			<a
 				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
 				href="/enter">Sign In</a>

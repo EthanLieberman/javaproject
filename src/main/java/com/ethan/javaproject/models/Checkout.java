@@ -1,37 +1,40 @@
 package com.ethan.javaproject.models;
 
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 public class Checkout {
 	
-	@NotBlank(message = "required")
+	@NotEmpty(message = "required")
 	private String firstName;
 	
-	@NotBlank(message = "required")
+	@NotEmpty(message = "required")
 	private String lastName;
 	
-	@NotBlank(message = "required")
+	@NotEmpty(message = "required")
 	private String email;
 	
-	@NotBlank(message = "required")
+	@NotEmpty(message = "required")
 	private String phone;
 	
-	@NotBlank(message = "required")
+	@NotEmpty(message = "required")
 	private String address;
 	
-	@NotBlank(message = "required")
+	@NotEmpty(message = "required")
 	private String city;
 	
-	@NotBlank(message = "required")
+	@NotEmpty(message = "required")
 	private String state;
 	
-	@NotBlank(message = "required")
+	@NotNull(message = "required")
+	@Size(min = 16, max = 16, message = "Must be a valid 16 digit number")
 	private String cardnum;
 	
-	@NotBlank(message = "required")
+	@NotEmpty(message = "required")
 	private String cvv;
 	
-	@NotBlank(message = "required")
+	@NotEmpty(message = "required")
 	private String expirationdate;
 	
 	

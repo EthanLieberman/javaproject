@@ -143,6 +143,7 @@ ul li ul li a {
 /* <!--footer--> */
 .footer {
 	margin-top: 20px;
+	padding-top: 15px;
 	width: 100%;
 	position: relative;
 	height: auto;
