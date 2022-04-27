@@ -81,21 +81,23 @@
 				<li><a href="/">Home</a></li>
 				<li><a href="#">Women</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/dresses">Dresses</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Lace</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Diamonds</a></li>
+						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
+								Dresses</a></li>
+						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
+								Dresses</a></li>
+
 					</ul></li>
 				<li><a href="#">Men</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/">Black</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Gold</a></li>
-						<li style="font-family: arvo;"><a href="/category/">White</a></li>
+						<li style="font-family: arvo;"><a href="/category/tuxedos">Tuxedos</a></li>
+						<li style="font-family: arvo;"><a href="/category/suits">Suits</a></li>
 					</ul></li>
-				<li><a href="#">Accesories</a>
+				<li><a href="#">Accessories</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/dresses">Women</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Men</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Misc</a></li>
+						<li style="font-family: arvo;"><a href="/category/veils">Veils</a></li>
+						<li style="font-family: arvo;"><a href="/category/jewelry">Jewelry</a></li>
+						<li style="font-family: arvo;"><a href="/category/tiaras">Tiaras</a></li>
+						<li style="font-family: arvo;"><a href="/category/ties">Ties</a></li>
 					</ul></li>
 				<li><a href="/about">About</a>
 			</ul>
@@ -118,10 +120,10 @@
 		<c:forEach items="${products }" var="i">
 
 			<div>
-				<a style="color: black;" href="/category/${i.category}/${i.id}"> 
-				<img class="allDresses" src="${i.url}" alt="product1" />
+				<a style="color: black;" href="/category/${i.category}/${i.id}">
+					<img class="allDresses" src="${i.url}" alt="product1" />
 					<p class="dressname" style="margin-top: .8%;">${i.name}</p>
-					</a>
+				</a>
 
 				<p>$${i.price}</p>
 			</div>
@@ -132,15 +134,15 @@
 
 
 
-<div class="dressesContainer">
-	<c:forEach items="${products }" var="i">
-	<img class ="allDresses" src="${i.url}" alt="product1"/>
-<p  class="dressname" style="margin-top: .5%;">${i.name}</p>
+	<div class="dressesContainer">
+		<c:forEach items="${products }" var="i">
+			<img class="allDresses" src="${i.url}" alt="product1" />
+			<p class="dressname" style="margin-top: .5%;">${i.name}</p>
 
-<p>$${i.price}</p>
+			<p>$${i.price}</p>
 
-</c:forEach>
-</div>
+		</c:forEach>
+	</div>
 
 
 	<!-- footer -->
