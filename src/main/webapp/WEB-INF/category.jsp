@@ -30,11 +30,13 @@
 	<div class="logoContainer">
 		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
 	</div>
-	
-	<h1>Category</h1>
-	${products}
+	<img src="https://images.unsplash.com/photo-1502727135886-df285cc8379f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="wedding dresses"/>
+	<h4>Women Wedding Dresses</h4>
 	<c:forEach items="${products }" var="i">
+	<img src="${i.url}" alt="product1"/>
 ${i.name}
+${i.price}
+
 </c:forEach>
 
 
