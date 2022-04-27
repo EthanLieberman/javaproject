@@ -81,7 +81,7 @@
 				<li><a href="/">Home</a></li>
 				<li><a href="#">Women</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
+						<li style="font-family: arvo;"><a href="/category/weddingdresses">Wedding
 								Dresses</a></li>
 						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
 								Dresses</a></li>
@@ -130,19 +130,6 @@
 		</c:forEach>
 	</div>
 
-
-
-
-
-	<div class="dressesContainer">
-		<c:forEach items="${products }" var="i">
-			<img class="allDresses" src="${i.url}" alt="product1" />
-			<p class="dressname" style="margin-top: .5%;">${i.name}</p>
-
-			<p>$${i.price}</p>
-
-		</c:forEach>
-	</div>
 
 
 	<!-- footer -->

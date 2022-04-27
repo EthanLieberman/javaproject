@@ -87,7 +87,7 @@
 				<li><a href="/">Home</a></li>
 				<li><a href="#">Women</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
+						<li style="font-family: arvo;"><a href="/category/weddingdresses">Wedding
 								Dresses</a></li>
 						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
 								Dresses</a></li>
