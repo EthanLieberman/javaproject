@@ -100,10 +100,9 @@
 	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
 
-		<a href="cart"><img alt="cart" src="/image/shoppingbag.png"
-			height="25px"> <c:out value="${cart.products.size()}" /></a>
+		
 
-		<%-- <c:if test="${userId}">
+	<%-- 	 <c:if test="${userId}">
 			<a
 				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
 				href="/enter">Sign Out</a>
@@ -112,8 +111,8 @@
 			<a
 				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
 				href="/enter">Sign In</a>
-		</c:if>
- --%>
+		</c:if> --%>
+ 
 
 	</div>
 
@@ -149,9 +148,16 @@
 					<option>14</option>
 					<option>16</option>
 					<option>18</option>
-				</select> <input class="button2" type="submit" value="Add to Bag" />
+
+
+				</select>
+				
+				<input class="button2" type="submit" value="Add to Bag" />
 
 			</form>
+			<br>
+				<p style="margin-top: 2%; font-size: 10pt;">Share This</p>
+				<p>insert icons</p>
 
 		</div>
 

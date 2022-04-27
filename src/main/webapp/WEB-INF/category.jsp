@@ -118,10 +118,10 @@
 		<c:forEach items="${products }" var="i">
 
 			<div>
-				<a style="color: black;" href="/category/${i.category}/${i.id}"> 
-				<img class="allDresses" src="${i.url}" alt="product1" />
+				<a style="color: black;" href="/category/${i.category}/${i.id}">
+					<img class="allDresses" src="${i.url}" alt="product1" />
 					<p class="dressname" style="margin-top: .8%;">${i.name}</p>
-					</a>
+				</a>
 
 				<p>$${i.price}</p>
 			</div>
@@ -129,18 +129,6 @@
 	</div>
 
 
-
-
-
-<div class="dressesContainer">
-	<c:forEach items="${products }" var="i">
-	<img class ="allDresses" src="${i.url}" alt="product1"/>
-<p  class="dressname" style="margin-top: .5%;">${i.name}</p>
-
-<p>$${i.price}</p>
-
-</c:forEach>
-</div>
 
 
 	<!-- footer -->
