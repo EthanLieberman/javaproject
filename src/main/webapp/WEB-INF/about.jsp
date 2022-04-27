@@ -53,7 +53,7 @@
 		<c:if test="${userId != null}">
 			<a
 				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
-				href="/enter">Sign Out</a>
+				href="/logout">Sign Out</a>
 		</c:if>
 		<c:if test="${userId == null}">
 			<a
