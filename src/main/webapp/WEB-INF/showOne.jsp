@@ -127,6 +127,10 @@
     <option>16</option>
     <option>18</option>
 </select>
+<div>
+<label for="quantity">Quantity:</label>
+  <input type="number" style="margin-top: 2%;" id="quantity" name="quantity" min="1" max="5">
+  </div>
 <input class="button2" type="submit" value="Add to Bag" />
 
 </form>
