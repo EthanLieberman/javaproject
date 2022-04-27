@@ -31,7 +31,7 @@
 		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
 	</div>
 
-	<h1>Black && White</h1>
+	
 	<p>contact us below</p>
 
 	<form action="/contact" method="post">
