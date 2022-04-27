@@ -174,7 +174,7 @@
 
 				<div
 					style="background-color: darkgray; width: 300px; height: 100px; padding: 10px;">
-					<input type="submit" value="Pay" />
+					<input class="button" type="submit" value="Pay" />
 					<div style="display: flex; justify-content: space-between; margin-top: 10px; align-items: center;">
 						<img alt="visa" src="/image/visa.png" height="25px"> <img
 							alt="paypal" src="/image/paypal.png" height="25px"> <img
