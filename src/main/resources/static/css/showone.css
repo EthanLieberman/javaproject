@@ -36,14 +36,29 @@
 }
 .dressesContainer{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	padding: 3%;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	border: red 2px solid;
+	gap:  5%;
+	
 }
 .allDresses{
 	width: 350px;
 	height: 500px;
 	object-fit:cover;
+	margin-top: 4%;
 }
+
+/* .textDisplay{
+	
+	border: red 2px solid;
+	width: 300px;
+	height: fit-content;
+	
+} */
 
 .dressname{
 	font-family: arvo;
