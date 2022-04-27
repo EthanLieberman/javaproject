@@ -112,7 +112,7 @@
 			alt="wedding dresses" />
 	</div>
 
-	<h4 style="padding: .7%;">Women's Wedding Dresses</h4>
+	<h3 style="padding: .7%; margin-left: 5%; font-family: arvo;">Wedding</h3>
 	<div class="dressesContainer">
 		<c:forEach items="${products }" var="i">
 
