@@ -97,14 +97,23 @@
 		</div>
 
 	</div>
+		<div class="coverImage">
 
-	<h5>If you have any questions or concerns, feel free to contact us below. </h5>
+		<img class="firstDress"
+			src="https://images.pexels.com/photos/3204420/pexels-photo-3204420.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+			alt="wedding dresses" /> 
+			
+	</div>
+
+<h4 class="text-center">Contact Us</h4>
+	<p style="margin-top: 2%; font-size: 12pt;" class="text-center">If you have any questions or concerns, feel free to contact us below. </p>
 <div class="contactContainer">
 	<form action="/contact" method="post">
-		<label>Email</label> <input class="form-control form-control-sm w-25" type="email"> <label>Message</label>
-		<input class="form-control form-control-sm w-25" type="text"> <input class="button" type="submit" value="Submit">
+		<label>Email</label> <input class="form-control form-control-sm" type="email"> <label>Message</label>
+		<input class="form-control form-control-sm" type="text"> <input class="button" type="submit" value="Submit">
 	</form>
 	</div>
+
 
 
 

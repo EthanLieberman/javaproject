@@ -297,4 +297,20 @@ ul li ul li a {
 .contactContainer{
 	display: flex;
 	justify-content: center;
+	margin-top: 2%;
+}
+
+.coverImage {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 1%;
+	padding: 2%;
+}
+
+.firstDress {
+	width: 600px;
+	height: 400px;
+	object-fit: cover;
+	margin: 1%;
 }
