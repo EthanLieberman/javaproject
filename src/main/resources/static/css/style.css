@@ -369,6 +369,29 @@ ul li ul li a {
 	width: 400px;
 	height: fit-content;
 	line-height: 2;
+	}
+	
+	/* confirmation page starts here: */
+	.thankyou{
+	width: 600px;
+	height: 500px;
+	border: rgb(245,245,245) solid 3px;
+	text-align: center;
+
+	}
+	.thankyoutext{
+	font-size: 40pt;
+	  background: linear-gradient(
+    to right, 
+    rgb(234,167,187), 
+    rgb(174,213,244)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+    /* -webkit-text-stroke: 1px black; */
+  
+  }
 
 
 	

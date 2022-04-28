@@ -235,7 +235,7 @@
 		
 			</div>
 			<div class="summary">
-				<div style="background-color:rgb(245,245,245); color:black; padding: 10px;">
+				<div style="background-color:rgb(245,245,245); width: 400px;color:black; padding: 10px;">
 					<h3>Order</h3>
 					<c:forEach items="${cart.products}" var="i">
 						<p>
@@ -260,7 +260,7 @@
 				</div>
 
 				<div
-					style="background-color: rgb(245,245,245); width: 300px; height: fit-content; padding: 10px;">
+					style="background-color: rgb(245,245,245); width: 400px; height: fit-content; padding: 10px;">
 					<input class="button"  style="margin-bottom: 8%;"type="submit" value="Pay" />
 					<div style="margin-top: 5%;"
 						>

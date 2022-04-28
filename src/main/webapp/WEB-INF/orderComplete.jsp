@@ -36,6 +36,22 @@
 	rel="stylesheet">
 </head>
 <body>
+	<div id="carouselSlidesOnly" class="carousel slide"
+		data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<p class="d-block commercial" alt="Slide 3">25% off today. Pick
+					up available. Options</p>
+			</div>
+			<div class="carousel-item">
+				<p class="d-block commercial" " alt="Slide 3">Subscribe today.</p>
+			</div>
+			<div class="carousel-item">
+				<p class="d-block commercial" " alt="Slide 3">Call us for an
+					appointment.</p>
+			</div>
+		</div>
+	</div>
 
 	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
@@ -66,12 +82,60 @@
 		</c:if>
 
 	</div>
+	<div class="search">
+		<form action="/searchRequest" method="post">
+			<input type="search" id="search" placeholder="search for products"
+				name="search"> <input class="button" type="submit"
+				value="Search">
+		</form>
+
+	</div>
 
 
 	<div class="center">
-		<div style="background-color: gray; width: 500px; display: flex; justify-content: center;">
-			<h5>Order Number: xxxxxxxxxx</h5>
+		<div class="dropdown">
+			<ul class="menu">
+				<li><a href="/">Home</a></li>
+				<li><a href="#">Women</a>
+					<ul class="dropdown-content">
+
+						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
+								Dresses</a></li>
+						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
+								Dresses</a></li>
+
+					</ul></li>
+				<li><a href="#">Men</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/tuxedos">Tuxedos</a></li>
+						<li style="font-family: arvo;"><a href="/category/suits">Suits</a></li>
+					</ul></li>
+				<li><a href="#">Accessories</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/veils">Veils</a></li>
+						<li style="font-family: arvo;"><a href="/category/jewelry">Jewelry</a></li>
+						<li style="font-family: arvo;"><a href="/category/tiaras">Tiaras</a></li>
+						<li style="font-family: arvo;"><a href="/category/ties">Ties</a></li>
+
+					</ul>
+			</ul>
 		</div>
+
+	</div>
+
+
+	<div class="center">
+		<div class="thankyou" style=" width: 500px; display: flex; justify-content: center; flex-direction: column; padding: 2%; margin-top: 3%;">
+		"INSERT ICON HERE!!!"
+		<h1 class="thankyoutext" style="font-family: 'Oleo Script', cursive;">Thank you for your purchase!</h1>
+		<br>
+			<h5>Your Order Number is:  <%= (int) (Math.random() * 100000000) %></h5>
+			<br>
+			<h5>Your estimated delivery time will be from 2-7 days. </h5>
+			<br>
+			<h5>For any questions, contact us at <a href="/contact">bwhelp@gmail.com</a></h5>
+
+	</div>
 	</div>
 
 

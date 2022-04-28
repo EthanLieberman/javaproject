@@ -26,9 +26,23 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-
-	<div
+<div id="carouselSlidesOnly" class="carousel slide"
+		data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<p class="d-block commercial" alt="Slide 3">25% off today. Pick
+					up available. Options</p>
+			</div>
+			<div class="carousel-item">
+				<p class="d-block commercial" " alt="Slide 3">Subscribe today.</p>
+			</div>
+			<div class="carousel-item">
+				<p class="d-block commercial" " alt="Slide 3">Call us for an
+					appointment.</p>
+			</div>
+		</div>
+	</div>
+		<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
 
 		<a href="/cart"><img alt="cart" src="/image/shoppingbag.png"
@@ -48,6 +62,49 @@
 
 	</div>
 	
+	<div class="search">
+		<form action="/searchRequest" method="post">
+			<input type="search" id="search" placeholder="search for products"
+				name="search"> <input class="button" type="submit"
+				value="Search">
+		</form>
+
+	</div>
+
+
+	<div class="center">
+		<div class="dropdown">
+			<ul class="menu">
+				<li><a href="/">Home</a></li>
+				<li><a href="#">Women</a>
+					<ul class="dropdown-content">
+
+						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
+								Dresses</a></li>
+						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
+								Dresses</a></li>
+
+					</ul></li>
+				<li><a href="#">Men</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/tuxedos">Tuxedos</a></li>
+						<li style="font-family: arvo;"><a href="/category/suits">Suits</a></li>
+					</ul></li>
+				<li><a href="#">Accessories</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/veils">Veils</a></li>
+						<li style="font-family: arvo;"><a href="/category/jewelry">Jewelry</a></li>
+						<li style="font-family: arvo;"><a href="/category/tiaras">Tiaras</a></li>
+						<li style="font-family: arvo;"><a href="/category/ties">Ties</a></li>
+
+					</ul>
+			</ul>
+		</div>
+
+	</div>
+
+
+	
 	<div class="logoContainer">
 		<c:if test="${panda}">
 			<a href="/"><img class="logo" src="/image/panda.png" alt="logo" /></a>
@@ -62,7 +119,55 @@
 	
 
 	<h1 class="center">Shopping bag</h1>
+<div class="tableCenter">
+    <table class="table  table-hover w-75">
+  <thead>
+    <tr>
+      <th scope="col">product</th>
+      <th scope="col">quantity</th>
+      <th scope="col">price</th>
+      
+     
+    </tr>
+  </thead>
+  <c:forEach items="${cart.products}" var="i" varStatus="loop">
+  <tbody>
+    <tr>
+      <td scope="row">${i.name} <img class="aboutImage" alt="item" src="${i.url}">
+       <form action="/removefromcart/${loop.index}" method="post">
+                    <input class="button" type="submit" value="remove from cart">
+                </form>
+      </td>
+      <td>1</td>
+      <td>${i.price}</td>
+      
+      
+    </tr>
 
+  </tbody>
+</table>
+
+</div>
+<div class="center">
+<div class="total">
+<h4>Sub Total: </h4>
+<c:set var="sum" value="${sum + i.price}" />
+     
+                    </c:forEach>
+                    <c:set var="taxes" value="${sum * .07}" />
+
+                    <p>
+                        Taxes:
+                        <fmt:formatNumber type="number" maxFractionDigits="2"
+                            value="${taxes}" />
+                    </p>
+                    <p>
+                        Total:
+                        <fmt:formatNumber type="number" maxFractionDigits="2"
+                            value="${sum + taxes}" />
+                    </p>
+</div>
+</div> 
 
 	<div
 		style="margin: auto; display: flex; flex-direction: column; align-items: center;">
