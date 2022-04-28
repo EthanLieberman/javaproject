@@ -25,15 +25,29 @@
 </head>
 <body>
 
-	<div class="commercial">
-		<div>
-			25% off today. Pick up available. <a href="/" style="color: white;">Options</a>
-		</div>
-	</div>
+<div id="carouselSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <p class="d-block commercial" alt="Slide 3">25% off today. Pick up available. Options</p>
+    </div>
+    <div class="carousel-item">
+        <p class="d-block commercial"" alt="Slide 3">Subscribe today.</p>
+    </div>
+    <div class="carousel-item">
+    <p class="d-block commercial"" alt="Slide 3">Call us for an appointment.</p>
+    </div>
+  </div>
+</div>
 
 	<!-- <a href="/logout">Logout</a> -->
 	<div class="logoContainer">
-		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+		<c:if test="${panda}">
+			<a href="/"><img class="logo" src="/image/panda.png" alt="logo" /></a>
+		</c:if>
+		<c:if test="${!panda}">
+			<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+		</c:if>
+
 	</div>
 
 

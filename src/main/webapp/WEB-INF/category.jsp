@@ -27,11 +27,19 @@
 </head>
 <body>
 
-	<div class="commercial">
-		<div>
-			25% off today. Pick up available. <a href="/" style="color: white;">Options</a>
-		</div>
-	</div>
+<div id="carouselSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <p class="d-block commercial" alt="Slide 3">25% off today. Pick up available. Options</p>
+    </div>
+    <div class="carousel-item">
+        <p class="d-block commercial"" alt="Slide 3">Subscribe today.</p>
+    </div>
+    <div class="carousel-item">
+    <p class="d-block commercial"" alt="Slide 3">Call us for an appointment.</p>
+    </div>
+  </div>
+</div>
 
 	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
@@ -58,7 +66,13 @@
 
 	<!-- <a href="/logout">Logout</a> -->
 	<div class="logoContainer">
-		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+		<c:if test="${panda}">
+			<a href="/"><img class="logo" src="/image/panda.png" alt="logo" /></a>
+		</c:if>
+		<c:if test="${!panda}">
+			<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+		</c:if>
+
 	</div>
 
 	<div class="search">
@@ -115,7 +129,7 @@
 			alt="wedding dresses" />
 	</div>
 
-	<h3 style="padding: .7%; margin-left: 5%; font-family: arvo;">Wedding</h3>
+	<h3 style="padding: .7%; margin-left: 5%; font-family: arvo;">Our Finest Selections</h3>
 	<div class="dressesContainer">
 		<c:forEach items="${products }" var="i">
 

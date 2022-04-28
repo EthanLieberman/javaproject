@@ -27,11 +27,19 @@
 </head>
 <body>
 
-	<div class="commercial">
-		<div>
-			25% off today. Pick up available. <a href="/" style="color: white;">Options</a>
-		</div>
-	</div>
+<div id="carouselSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <p class="d-block commercial" alt="Slide 3">25% off today. Pick up available. Options</p>
+    </div>
+    <div class="carousel-item">
+        <p class="d-block commercial"" alt="Slide 3">Subscribe today.</p>
+    </div>
+    <div class="carousel-item">
+    <p class="d-block commercial"" alt="Slide 3">Call us for an appointment.</p>
+    </div>
+  </div>
+</div>
 
 	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
@@ -55,7 +63,13 @@
 
 
 	<div class="logoContainer">
-		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+		<c:if test="${panda}">
+			<a href="/"><img class="logo" src="/image/panda.png" alt="logo" /></a>
+		</c:if>
+		<c:if test="${!panda}">
+			<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+		</c:if>
+
 	</div>
 
 	<div class="search">
@@ -159,7 +173,12 @@
 			</form>
 			<br>
 				<p style="margin-top: 2%; font-size: 10pt;">Share This</p>
-				<p>insert icons</p>
+				<p>
+				<a href="#" ><img alt="fbmedia" src="/image/fblogomedia.png" width="35px"></a>
+				<a href="#" ><img alt="twittermedia" src="/image/twitterlogomedia.png" width="35px"></a>
+				<a href="#" ><img alt="googlemedia" src="/image/googlemedia.png" width="35px"></a>
+				<a href="#" ><img alt="igmedia" src="/image/iglogomedia.png" width="35px"></a>
+				</p>
 
 		</div>
 

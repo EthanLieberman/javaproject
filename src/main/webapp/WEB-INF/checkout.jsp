@@ -30,10 +30,38 @@
 </head>
 <body>
 
-	<div class="logoContainer">
-		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+
+	<div
+		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
+
+		<a href="/cart"><img alt="cart" src="/image/shoppingbag.png"
+			height="25px"> <c:out value="${cart.products.size()}" /></a>
+
+		<c:if test="${userId != null}">
+			<a
+				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
+				href="/logout">Sign Out</a>
+		</c:if>
+		<c:if test="${userId == null}">
+			<a
+				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
+				href="/enter">Sign In</a>
+		</c:if>
+
+
 	</div>
 
+	<div class="logoContainer">
+		<c:if test="${panda}">
+			<a href="/"><img class="logo" src="/image/panda.png" alt="logo" /></a>
+		</c:if>
+		<c:if test="${!panda}">
+			<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+		</c:if>
+
+	</div>
+
+	<h1 class="center">Checkout</h1>
 
 	<div class="center">
 		<form:form action="/checkoutProcess" method="post"
@@ -175,7 +203,8 @@
 				<div
 					style="background-color: darkgray; width: 300px; height: 100px; padding: 10px;">
 					<input class="button" type="submit" value="Pay" />
-					<div style="display: flex; justify-content: space-between; margin-top: 10px; align-items: center;">
+					<div
+						style="display: flex; justify-content: space-between; margin-top: 10px; align-items: center;">
 						<img alt="visa" src="/image/visa.png" height="25px"> <img
 							alt="paypal" src="/image/paypal.png" height="25px"> <img
 							alt="mastercard" src="/image/mastercard.png" height="25px">
