@@ -12,11 +12,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>One Item</title>
+<title>Insert title here</title>
 <link rel="stylesheet"
 	href="/webjars/bootstrap/5.0.1/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/style.css">
-<link rel="stylesheet" type="text/css" href="/css/showone.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,26 +25,40 @@
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body>
 
-<div id="carouselSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <p class="d-block commercial" alt="Slide 3">25% off today. Pick up available. Options</p>
-    </div>
-    <div class="carousel-item">
-        <p class="d-block commercial"" alt="Slide 3">Subscribe today.</p>
-    </div>
-    <div class="carousel-item">
-    <p class="d-block commercial"" alt="Slide 3">Call us for an appointment.</p>
-    </div>
-  </div>
-</div>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="/webjars/bootstrap/5.0.1/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+	rel="stylesheet">
+
+</head>
+<body>
+	<div id="carouselSlidesOnly" class="carousel slide"
+		data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<p class="d-block commercial" alt="Slide 3">25% off today. Pick
+					up available. Options</p>
+			</div>
+			<div class="carousel-item">
+				<p class="d-block commercial" " alt="Slide 3">Subscribe today.</p>
+			</div>
+			<div class="carousel-item">
+				<p class="d-block commercial" " alt="Slide 3">Call us for an
+					appointment.</p>
+			</div>
+		</div>
+	</div>
+
 
 	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
 
-		<a href="/cart"><img alt="cart" src="/image/shoppingbag.png"
+		<a href="/bag"><img alt="bag" src="/image/shoppingbag.png"
 			height="25px"> <c:out value="${cart.products.size()}" /></a>
 
 		<c:if test="${userId != null}">
@@ -61,6 +74,10 @@
 
 
 	</div>
+
+
+
+
 
 
 	<div class="logoContainer">
@@ -82,23 +99,22 @@
 
 	</div>
 
+
 	<div class="center">
 		<div class="dropdown">
 			<ul class="menu">
 				<li><a href="/">Home</a></li>
 				<li><a href="#">Women</a>
 					<ul class="dropdown-content">
+						<<<<<<< HEAD
 						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
 								Dresses</a></li>
-
 						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
-
 								Dresses</a></li>
 
 					</ul></li>
 				<li><a href="#">Men</a>
 					<ul class="dropdown-content">
-
 						<li style="font-family: arvo;"><a href="/category/tuxedos">Tuxedos</a></li>
 						<li style="font-family: arvo;"><a href="/category/suits">Suits</a></li>
 					</ul></li>
@@ -108,95 +124,65 @@
 						<li style="font-family: arvo;"><a href="/category/jewelry">Jewelry</a></li>
 						<li style="font-family: arvo;"><a href="/category/tiaras">Tiaras</a></li>
 						<li style="font-family: arvo;"><a href="/category/ties">Ties</a></li>
+						=======
+						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
+								Dresses</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Bridesmaid
+								Dresses</a></li>
 
+					</ul></li>
+				<li><a href="#">Men</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/">Tuxedos</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Suits</a></li>
+
+					</ul></li>
+				<li><a href="#">Accessories</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/dresses">Veils</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Jewelry</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Tiaras</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Ties</a></li>
+						>>>>>>> 4b170d6 (minor changes)
 					</ul></li>
 				<li><a href="/about">About</a>
 			</ul>
 		</div>
 
 	</div>
+	<!-- about us content starts here -->
+	<h3
+		style="font-family: arvo; font-weight: bold; text-align: center; margin-top: 5%;">About
+		Us</h3>
+	<div class="imageabout">
 
-
-
-	<div
-		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
-
-
-
-		<%-- 	 <c:if test="${userId}">
-			<a
-				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
-				href="/enter">Sign Out</a>
-		</c:if>
-		<c:if test="${!userId}">
-			<a
-				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
-				href="/enter">Sign In</a>
-		</c:if> --%>
-
-
+		<img class="aboutImage"
+			src="https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+			alt="fashion" /> <img class="aboutImage"
+			src="https://images.pexels.com/photos/1721944/pexels-photo-1721944.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+			alt="fashion" /> <img class="aboutImage"
+			src="https://images.pexels.com/photos/2814808/pexels-photo-2814808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+			alt="fashion" />
 	</div>
 
-	<div class="productContainer">
-
-		<div class="imageContainer">
-			<img class="productImage" src="${product.url}" alt="wedding dress" />
-		</div>
-		<div class="descriptionContainer">
-			<h4 style="font-family: arvo;">${product.name}</h4>
+	<!-- 	<img alt="about image" src="/image/aboutimage.png" width="100px"> -->
+	<div class="textContainer">
+		<div class="text">
+			<p>A keen eye for designs in bringing stylish luxious suits and
+				dresses. Started as two enthusiastic goal-driven duos. Here at Black
+				&& White, we are highly committed to collaborating with customers to
+				make their wedding dreams come true.</p>
 			<br>
-			<h5 style="font-weight: bold">$${product.price}</h5>
+			<p>High wedding retailer shop, all one-in-all desgination for
+				dresses, tuxedos, assessories for women and men. We strive for the
+				best to exceed your expectations and desires.</p>
 			<br>
-			<p>
-				<img alt="shippingimage" src="/image/shipping.png" width="50px">
-			</p>
-			<p>Free Shipping</p>
-			<br>
-			<p>${product.description}</p>
-			<br>
-			<p>Choose your size:</p>
-			<form action="/addtocart/${product.id}" method="post">
-				<select class="form-select form-select-sm mb-4 w-25" name="size">
-					<option selected="size">Size</option>
-					<option>00</option>
-					<option>0</option>
-					<option>2</option>
-					<option>4</option>
-					<option>6</option>
-					<option>8</option>
-					<option>10</option>
-					<option>12</option>
-					<option>14</option>
-					<option>16</option>
-					<option>18</option>
-
-
-				</select> 
-				<label for="quantity">Quantity:</label> <input type="number"
-					id="quantity" name="quantity" min="1" max="5"><br> <input
-					class="button2" type="submit" value="Add to Bag" />
-
-			</form>
-			<br>
-
-				<p style="margin-top: 2%; font-size: 10pt;">Share This</p>
-				<p>
-				<a href="#" ><img alt="fbmedia" src="/image/fblogomedia.png" width="35px"></a>
-				<a href="#" ><img alt="twittermedia" src="/image/twitterlogomedia.png" width="35px"></a>
-				<a href="#" ><img alt="googlemedia" src="/image/googlemedia.png" width="35px"></a>
-				<a href="#" ><img alt="igmedia" src="/image/iglogomedia.png" width="35px"></a>
-				</p>
+			<p>Always striving to keep customer updates and satisfication.
+				Contact us anytime. We highly value and appreciate your feedbacks.</p>
 
 
 		</div>
-
-
 	</div>
-
-
-
-
-
 	<!-- footer -->
 	<footer>
 		<div class="footer">
@@ -249,3 +235,5 @@
 	</footer>
 </body>
 </html>
+
+

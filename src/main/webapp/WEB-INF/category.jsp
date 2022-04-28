@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>One Item</title>
+<title>cat placeholder</title>
 <link rel="stylesheet"
 	href="/webjars/bootstrap/5.0.1/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -28,19 +28,22 @@
 </head>
 <body>
 
-<div id="carouselSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <p class="d-block commercial" alt="Slide 3">25% off today. Pick up available. Options</p>
-    </div>
-    <div class="carousel-item">
-        <p class="d-block commercial"" alt="Slide 3">Subscribe today.</p>
-    </div>
-    <div class="carousel-item">
-    <p class="d-block commercial"" alt="Slide 3">Call us for an appointment.</p>
-    </div>
-  </div>
-</div>
+	<div id="carouselSlidesOnly" class="carousel slide"
+		data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<p class="d-block commercial" alt="Slide 3">25% off today. Pick
+					up available. Options</p>
+			</div>
+			<div class="carousel-item">
+				<p class="d-block commercial" " alt="Slide 3">Subscribe today.</p>
+			</div>
+			<div class="carousel-item">
+				<p class="d-block commercial" " alt="Slide 3">Call us for an
+					appointment.</p>
+			</div>
+		</div>
+	</div>
 
 	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
@@ -63,6 +66,9 @@
 	</div>
 
 
+
+
+	<!-- <a href="/logout">Logout</a> -->
 	<div class="logoContainer">
 		<c:if test="${panda}">
 			<a href="/"><img class="logo" src="/image/panda.png" alt="logo" /></a>
@@ -82,23 +88,25 @@
 
 	</div>
 
+
+
+
+	<%-- <p>Hi ${userName}</p> --%>
+
 	<div class="center">
 		<div class="dropdown">
 			<ul class="menu">
 				<li><a href="/">Home</a></li>
 				<li><a href="#">Women</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
-								Dresses</a></li>
-
+						<li style="font-family: arvo;"><a
+							href="/category/weddingdresses">Wedding Dresses</a></li>
 						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
-
 								Dresses</a></li>
 
 					</ul></li>
 				<li><a href="#">Men</a>
 					<ul class="dropdown-content">
-
 						<li style="font-family: arvo;"><a href="/category/tuxedos">Tuxedos</a></li>
 						<li style="font-family: arvo;"><a href="/category/suits">Suits</a></li>
 					</ul></li>
@@ -108,92 +116,38 @@
 						<li style="font-family: arvo;"><a href="/category/jewelry">Jewelry</a></li>
 						<li style="font-family: arvo;"><a href="/category/tiaras">Tiaras</a></li>
 						<li style="font-family: arvo;"><a href="/category/ties">Ties</a></li>
-
 					</ul></li>
 				<li><a href="/about">About</a>
 			</ul>
 		</div>
 
 	</div>
+	<div class="coverImage">
 
-
-
-	<div
-		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
-
-
-
-		<%-- 	 <c:if test="${userId}">
-			<a
-				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
-				href="/enter">Sign Out</a>
-		</c:if>
-		<c:if test="${!userId}">
-			<a
-				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
-				href="/enter">Sign In</a>
-		</c:if> --%>
-
-
+		<img class="firstDress"
+			src="https://images.unsplash.com/photo-1502727135886-df285cc8379f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+			alt="wedding dresses" /> <img class="secondDress"
+			src="https://images.unsplash.com/photo-1534875756527-5e8e4392005f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=732&q=80"
+			alt="wedding dresses" /> <img class="secondDress"
+			src="https://images.unsplash.com/photo-1523264058183-49ea5572cdf4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+			alt="wedding dresses" />
 	</div>
 
-	<div class="productContainer">
+	<h3 style="padding: .7%; margin-left: 5%; font-family: arvo;">Our
+		Finest Selections</h3>
+	<div class="dressesContainer">
+		<c:forEach items="${products }" var="i">
 
-		<div class="imageContainer">
-			<img class="productImage" src="${product.url}" alt="wedding dress" />
-		</div>
-		<div class="descriptionContainer">
-			<h4 style="font-family: arvo;">${product.name}</h4>
-			<br>
-			<h5 style="font-weight: bold">$${product.price}</h5>
-			<br>
-			<p>
-				<img alt="shippingimage" src="/image/shipping.png" width="50px">
-			</p>
-			<p>Free Shipping</p>
-			<br>
-			<p>${product.description}</p>
-			<br>
-			<p>Choose your size:</p>
-			<form action="/addtocart/${product.id}" method="post">
-				<select class="form-select form-select-sm mb-4 w-25" name="size">
-					<option selected="size">Size</option>
-					<option>00</option>
-					<option>0</option>
-					<option>2</option>
-					<option>4</option>
-					<option>6</option>
-					<option>8</option>
-					<option>10</option>
-					<option>12</option>
-					<option>14</option>
-					<option>16</option>
-					<option>18</option>
+			<div>
+				<a style="color: black;" href="/category/${i.category}/${i.id}">
+					<img class="allDresses" src="${i.url}" alt="product1" />
+					<p class="dressname" style="margin-top: .8%;">${i.name}</p>
+				</a>
 
-
-				</select> 
-				<label for="quantity">Quantity:</label> <input type="number"
-					id="quantity" name="quantity" min="1" max="5"><br> <input
-					class="button2" type="submit" value="Add to Bag" />
-
-			</form>
-			<br>
-
-				<p style="margin-top: 2%; font-size: 10pt;">Share This</p>
-				<p>
-				<a href="#" ><img alt="fbmedia" src="/image/fblogomedia.png" width="35px"></a>
-				<a href="#" ><img alt="twittermedia" src="/image/twitterlogomedia.png" width="35px"></a>
-				<a href="#" ><img alt="googlemedia" src="/image/googlemedia.png" width="35px"></a>
-				<a href="#" ><img alt="igmedia" src="/image/iglogomedia.png" width="35px"></a>
-				</p>
-
-
-		</div>
-
-
+				<p>$${i.price}</p>
+			</div>
+		</c:forEach>
 	</div>
-
-
 
 
 
@@ -247,5 +201,6 @@
 		</div>
 
 	</footer>
+
 </body>
 </html>
