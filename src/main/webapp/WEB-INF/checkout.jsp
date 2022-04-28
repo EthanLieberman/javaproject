@@ -29,6 +29,22 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<div id="carouselSlidesOnly" class="carousel slide"
+		data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<p class="d-block commercial" alt="Slide 3">25% off today. Pick
+					up available. Options</p>
+			</div>
+			<div class="carousel-item">
+				<p class="d-block commercial" " alt="Slide 3">Subscribe today.</p>
+			</div>
+			<div class="carousel-item">
+				<p class="d-block commercial" " alt="Slide 3">Call us for an
+					appointment.</p>
+			</div>
+		</div>
+	</div>
 
 
 	<div
@@ -60,47 +76,85 @@
 		</c:if>
 
 	</div>
+		<div class="center">
+		<div class="dropdown">
+			<ul class="menu">
+				<li><a href="/">Home</a></li>
+				<li><a href="#">Women</a>
+					<ul class="dropdown-content">
 
-	<h1 class="center">Checkout</h1>
+						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
+								Dresses</a></li>
+						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
+								Dresses</a></li>
 
-	<div class="center">
+					</ul></li>
+				<li><a href="#">Men</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/tuxedos">Tuxedos</a></li>
+						<li style="font-family: arvo;"><a href="/category/suits">Suits</a></li>
+					</ul></li>
+				<li><a href="#">Accessories</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/veils">Veils</a></li>
+						<li style="font-family: arvo;"><a href="/category/jewelry">Jewelry</a></li>
+						<li style="font-family: arvo;"><a href="/category/tiaras">Tiaras</a></li>
+						<li style="font-family: arvo;"><a href="/category/ties">Ties</a></li>
+
+					</ul>
+			</ul>
+		</div>
+
+	</div>
+<div class="outerContainer">
+<h1>Checkout</h1>
+<div class="checkoutContainer">
+
+	
+
+
+		<div class="info">
 		<form:form action="/checkoutProcess" method="post"
 			modelAttribute="checkout" style="display: flex; gap: 50px;">
 			<div>
-				<p>
-					<form:label path="firstName">First Name</form:label>
-					<form:errors path="firstName" style="color: red;" />
-					<form:input path="firstName" />
-				</p>
-				<p>
-					<form:label path="lastName">Last Name</form:label>
-					<form:errors path="lastName" style="color: red;" />
-					<form:input path="lastName" />
-				</p>
+			<h5 style="margin-bottom: 7%;">Customer's Contact Information</h5>
 				<p>
 					<form:label path="email">Email</form:label>
 					<form:errors path="email" style="color: red;" />
-					<form:input path="email" />
+					<form:input class="form-control form-control-sm" path="email" />
 				</p>
 				<p>
 					<form:label path="phone">Phone #</form:label>
 					<form:errors path="phone" style="color: red;" />
-					<form:input path="phone" />
+					<form:input class="form-control form-control-sm" path="phone" />
 				</p>
+				<hr/>
+			<h5 style="margin-bottom: 7%;">Shipping Address</h5>
+				<p >
+					<form:label path="firstName">First Name</form:label>
+					<form:errors path="firstName" style="color: red;" />
+					<form:input class="form-control form-control-sm" path="firstName" />
+				</p>
+				<p>
+					<form:label path="lastName">Last Name</form:label>
+					<form:errors path="lastName" style="color: red;" />
+					<form:input class="form-control form-control-sm" path="lastName" />
+				</p>
+				
 				<p>
 					<form:label path="address">Address</form:label>
 					<form:errors path="address" style="color: red;" />
-					<form:input path="address" />
+					<form:input class="form-control form-control-sm" path="address" />
 				</p>
 				<p>
 					<form:label path="city">City</form:label>
 					<form:errors path="city" style="color: red;" />
-					<form:input path="city" />
+					<form:input class="form-control form-control-sm" path="city" />
 				</p>
 				<p>
 					<form:label path="state">State</form:label>
 					<form:errors path="state" style="color: red;" />
-					<form:select path="state">
+					<form:select class="form-control form-control-sm" path="state">
 						<form:option value="AL" />
 						<form:option value="AK" />
 						<form:option value="AZ" />
@@ -159,52 +213,57 @@
 						<form:option value="WY" />
 					</form:select>
 				</p>
+				<hr/>
+				<h5 style="margin-bottom: 7%;">Payment Information</h5>
 				<p>
 					<form:label path="cardnum">Card Number</form:label>
 					<form:errors path="cardnum" style="color: red;" />
-					<form:input type="number" path="cardnum" />
+					<form:input class="form-control form-control-sm" type="number" path="cardnum" />
 				</p>
 				<p>
 					<form:label path="cvv">CVV</form:label>
 					<form:errors path="cvv" style="color: red;" />
-					<form:input path="cvv" />
+					<form:input class="form-control form-control-sm" path="cvv" />
 				</p>
 				<p>
 					<form:label path="expirationdate">Expiration Date</form:label>
 					<form:errors path="expirationdate" style="color: red;" />
-					<form:input type="month" path="expirationdate" />
+					<form:input class="form-control form-control-sm" type="month" path="expirationdate" />
 				</p>
 
 			</div>
-			<div>
-				<div style="background-color: gray; padding: 10px;">
+		
+			</div>
+			<div class="summary">
+				<div style="background-color:rgb(245,245,245); color:black; padding: 10px;">
 					<h3>Order</h3>
 					<c:forEach items="${cart.products}" var="i">
 						<p>
-							<c:out value="${i.name}" />
-							<c:out value="${i.price}" />
+							<c:out value="${i.name}" /><br><br>
+							price: $<c:out value="${i.price}" />
 						</p>
 						<c:set var="sum" value="${sum + i.price}" />
 					</c:forEach>
 					<c:set var="taxes" value="${sum * .07}" />
 
 					<p>
-						Taxes:
+						Taxes: $
 						<fmt:formatNumber type="number" maxFractionDigits="2"
 							value="${taxes}" />
 					</p>
+					<hr/>
 					<p>
-						Total:
+						Total: $
 						<fmt:formatNumber type="number" maxFractionDigits="2"
 							value="${sum + taxes}" />
 					</p>
 				</div>
 
 				<div
-					style="background-color: darkgray; width: 300px; height: 100px; padding: 10px;">
-					<input class="button" type="submit" value="Pay" />
-					<div
-						style="display: flex; justify-content: space-between; margin-top: 10px; align-items: center;">
+					style="background-color: rgb(245,245,245); width: 300px; height: fit-content; padding: 10px;">
+					<input class="button"  style="margin-bottom: 8%;"type="submit" value="Pay" />
+					<div style="margin-top: 5%;"
+						>
 						<img alt="visa" src="/image/visa.png" height="25px"> <img
 							alt="paypal" src="/image/paypal.png" height="25px"> <img
 							alt="mastercard" src="/image/mastercard.png" height="25px">
@@ -212,10 +271,14 @@
 					</div>
 				</div>
 			</div>
+			</form:form>
+			</div>
 
 
-		</form:form>
+		
 	</div>
+
+	
 
 
 	<!-- footer -->
@@ -266,6 +329,7 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
+		
 
 	</footer>
 

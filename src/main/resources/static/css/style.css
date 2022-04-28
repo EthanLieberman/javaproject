@@ -314,3 +314,63 @@ ul li ul li a {
 	object-fit: cover;
 	margin: 1%;
 }
+
+/* checkout page starts here */
+.button3{
+	width: 150px;
+	height: 30px;
+	background-color: black;
+	color: white;
+	margin-top: 20px;
+	
+}
+
+.tableCenter{
+	display: flex;
+	justify-content: center;
+}
+
+
+.table{
+	margin-top: 4%;
+}
+
+.total{
+		display: flex;
+	flex-direction: column;
+	margin-bottom: 5%;
+	width: 1150px;
+	border: red 2px solid;
+	align-content: flex-end;
+	
+	
+}
+
+/* checkout card page */
+
+.checkoutContainer{
+	width: 1100px;
+	height: fit-content;
+	justify-content: space-evenly;
+	display: flex;
+	margin-top: 2%;
+	
+}
+
+.outerContainer{
+
+	display: flex;
+	justify-content: center;
+	margin-top: 2%;
+	
+}
+
+.info{
+	width: 400px;
+	height: fit-content;
+	line-height: 2;
+
+
+	
+
+
