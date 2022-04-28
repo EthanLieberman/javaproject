@@ -63,11 +63,6 @@
 
 	<h1 class="center">Shopping bag</h1>
 
-	<form action="/addtocart/4" method="post">
-		<input type="submit" value="add to cart">
-	</form>
-
-
 
 	<div
 		style="margin: auto; display: flex; flex-direction: column; align-items: center;">
