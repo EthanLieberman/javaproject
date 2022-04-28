@@ -98,12 +98,13 @@
 
 	</div>
 
-	<h5>If you have any questions or concerns, feel free to contact us below. Leave a Comment!!😉</h5>
-
+	<h5>If you have any questions or concerns, feel free to contact us below. </h5>
+<div class="contactContainer">
 	<form action="/contact" method="post">
-		<label>Email</label> <input type="email"> <label>Message</label>
-		<input type="text"> <input type="submit" value="Submit">
+		<label>Email</label> <input class="form-control form-control-sm w-25" type="email"> <label>Message</label>
+		<input class="form-control form-control-sm w-25" type="text"> <input class="button" type="submit" value="Submit">
 	</form>
+	</div>
 
 
 
