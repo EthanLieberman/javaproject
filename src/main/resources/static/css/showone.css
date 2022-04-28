@@ -4,6 +4,7 @@
 	display: flex;
 	flex-direction: row;
 	padding: 5%;
+	justify-content: center;
 }
 /* product image left side */
 .productImage {
@@ -117,8 +118,13 @@
 	margin-top: 20px;
 }
 /* add to bag button */
+<<<<<<< HEAD
 .button2 {
 	width: 20rem;
+=======
+.button2{
+	width: 15rem;
+>>>>>>> 4b170d6 (minor changes)
 	height: 35px;
 	font-family: arvo;
 	color: white;

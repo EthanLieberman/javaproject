@@ -26,7 +26,28 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<div id="carouselSlidesOnly" class="carousel slide"
+		data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<p class="d-block commercial" alt="Slide 3">25% off today. Pick
+					up available. Options</p>
+			</div>
+			<div class="carousel-item">
+				<p class="d-block commercial" " alt="Slide 3">Subscribe today.</p>
+			</div>
+			<div class="carousel-item">
+				<p class="d-block commercial" " alt="Slide 3">Call us for an
+					appointment.</p>
+			</div>
+		</div>
+	</div>
+		<div
+		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
 
+		<a href="/cart"><img alt="cart" src="/image/shoppingbag.png"
+			height="25px"> <c:out value="${cart.products.size()}" /></a>
+	</div>
 	<div class="logoContainer">
 		<c:if test="${panda}">
 			<a href="/"><img class="logo" src="/image/panda.png" alt="logo" /></a>
@@ -37,8 +58,47 @@
 
 	</div>
 
+
+
+	<div class="search">
+		<form action="/searchRequest" method="post">
+			<input type="search" id="search" placeholder="search for products"
+				name="search"> <input class="button" type="submit"
+				value="Search">
+		</form>
+
+	</div>
 	
-	<p>contact us below</p>
+	<div class="center">
+		<div class="dropdown">
+			<ul class="menu">
+				<li><a href="/">Home</a></li>
+				<li><a href="#">Women</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/dresses">Wedding Dresses</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Bridesmaid Dresses</a></li>
+					
+					</ul></li>
+				<li><a href="#">Men</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/">Tuxedos</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Suits</a></li>
+						
+					</ul></li>
+				<li><a href="#">Accessories</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/dresses">Veils</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Jewelry</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Tiaras</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Ties</a></li>
+					</ul></li>
+				<li><a href="/about">About</a>
+			</ul>
+		</div>
+
+	</div>
+
+	<h5>If you have any questions or concerns, feel free to contact us below.</h5>
 
 	<form action="/contact" method="post">
 		<label>Email</label> <input type="email"> <label>Message</label>

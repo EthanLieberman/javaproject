@@ -89,12 +89,15 @@
 					<ul class="dropdown-content">
 						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
 								Dresses</a></li>
+
 						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
+
 								Dresses</a></li>
 
 					</ul></li>
 				<li><a href="#">Men</a>
 					<ul class="dropdown-content">
+
 						<li style="font-family: arvo;"><a href="/category/tuxedos">Tuxedos</a></li>
 						<li style="font-family: arvo;"><a href="/category/suits">Suits</a></li>
 					</ul></li>
@@ -104,6 +107,7 @@
 						<li style="font-family: arvo;"><a href="/category/jewelry">Jewelry</a></li>
 						<li style="font-family: arvo;"><a href="/category/tiaras">Tiaras</a></li>
 						<li style="font-family: arvo;"><a href="/category/ties">Ties</a></li>
+
 					</ul></li>
 				<li><a href="/about">About</a>
 			</ul>
@@ -116,9 +120,9 @@
 	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
 
-		
 
-	<%-- 	 <c:if test="${userId}">
+
+		<%-- 	 <c:if test="${userId}">
 			<a
 				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
 				href="/enter">Sign Out</a>
@@ -128,7 +132,7 @@
 				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
 				href="/enter">Sign In</a>
 		</c:if> --%>
- 
+
 
 	</div>
 
@@ -151,7 +155,7 @@
 			<br>
 			<p>Choose your size:</p>
 			<form action="/addtocart/${product.id}" method="post">
-				<select class="form-select form-select-sm" name="size">
+				<select class="form-select form-select-sm mb-4 w-25" name="size">
 					<option selected="size">Size</option>
 					<option>00</option>
 					<option>0</option>
@@ -166,12 +170,14 @@
 					<option>18</option>
 
 
-				</select>
-				
-				<input class="button2" type="submit" value="Add to Bag" />
+				</select> 
+				<label for="quantity">Quantity:</label> <input type="number"
+					id="quantity" name="quantity" min="1" max="5"><br> <input
+					class="button2" type="submit" value="Add to Bag" />
 
 			</form>
 			<br>
+
 				<p style="margin-top: 2%; font-size: 10pt;">Share This</p>
 				<p>
 				<a href="#" ><img alt="fbmedia" src="/image/fblogomedia.png" width="35px"></a>
@@ -179,6 +185,7 @@
 				<a href="#" ><img alt="googlemedia" src="/image/googlemedia.png" width="35px"></a>
 				<a href="#" ><img alt="igmedia" src="/image/iglogomedia.png" width="35px"></a>
 				</p>
+
 
 		</div>
 
