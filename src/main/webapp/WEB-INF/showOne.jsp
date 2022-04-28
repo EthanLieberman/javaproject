@@ -27,11 +27,19 @@
 </head>
 <body>
 
-	<div class="commercial">
-		<div>
-			25% off today. Pick up available. <a href="/" style="color: white;">Options</a>
-		</div>
-	</div>
+<div id="carouselSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <p class="d-block commercial" alt="Slide 3">25% off today. Pick up available. Options</p>
+    </div>
+    <div class="carousel-item">
+        <p class="d-block commercial"" alt="Slide 3">Subscribe today.</p>
+    </div>
+    <div class="carousel-item">
+    <p class="d-block commercial"" alt="Slide 3">Call us for an appointment.</p>
+    </div>
+  </div>
+</div>
 
 	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
@@ -55,7 +63,13 @@
 
 
 	<div class="logoContainer">
-		<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+		<c:if test="${panda}">
+			<a href="/"><img class="logo" src="/image/panda.png" alt="logo" /></a>
+		</c:if>
+		<c:if test="${!panda}">
+			<a href="/"><img class="logo" src="/image/BW.png" alt="logo" /></a>
+		</c:if>
+
 	</div>
 
 	<div class="search">
@@ -75,17 +89,15 @@
 					<ul class="dropdown-content">
 						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
 								Dresses</a></li>
-<<<<<<< HEAD
+
 						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
-=======
-						<li style="font-family: arvo;"><a href="/category/">Bridesmaid
->>>>>>> 4b170d6 (minor changes)
+
 								Dresses</a></li>
 
 					</ul></li>
 				<li><a href="#">Men</a>
 					<ul class="dropdown-content">
-<<<<<<< HEAD
+
 						<li style="font-family: arvo;"><a href="/category/tuxedos">Tuxedos</a></li>
 						<li style="font-family: arvo;"><a href="/category/suits">Suits</a></li>
 					</ul></li>
@@ -95,18 +107,7 @@
 						<li style="font-family: arvo;"><a href="/category/jewelry">Jewelry</a></li>
 						<li style="font-family: arvo;"><a href="/category/tiaras">Tiaras</a></li>
 						<li style="font-family: arvo;"><a href="/category/ties">Ties</a></li>
-=======
-						<li style="font-family: arvo;"><a href="/category/">Tuxedos</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Suits</a></li>
 
-					</ul></li>
-				<li><a href="#">Accessories</a>
-					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/dresses">Veils</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Jewelry</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Tiaras</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Ties</a></li>
->>>>>>> 4b170d6 (minor changes)
 					</ul></li>
 				<li><a href="/about">About</a>
 			</ul>
@@ -176,8 +177,15 @@
 
 			</form>
 			<br>
-			<p style="margin-top: 2%; font-size: 10pt;">Share This</p>
-			<p>insert icons</p>
+
+				<p style="margin-top: 2%; font-size: 10pt;">Share This</p>
+				<p>
+				<a href="#" ><img alt="fbmedia" src="/image/fblogomedia.png" width="35px"></a>
+				<a href="#" ><img alt="twittermedia" src="/image/twitterlogomedia.png" width="35px"></a>
+				<a href="#" ><img alt="googlemedia" src="/image/googlemedia.png" width="35px"></a>
+				<a href="#" ><img alt="igmedia" src="/image/iglogomedia.png" width="35px"></a>
+				</p>
+
 
 		</div>
 

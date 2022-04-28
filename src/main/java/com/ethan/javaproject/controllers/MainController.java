@@ -80,7 +80,7 @@ public class MainController {
 
 //	User session shopping cart
 	@GetMapping("/cart")
-	public String cartEmpty() {
+	public String cart() {
 		return "cart.jsp";
 	}
 
@@ -98,8 +98,6 @@ public class MainController {
 	public String removefromcart(Model model, HttpSession session, @PathVariable("idx") int idx) {
 		Cart cart = (Cart) session.getAttribute("cart");
 		cart.getProducts().remove(idx);
-		System.out.println(idx);
-		System.out.println("remove");
 		session.setAttribute("cart", cart);
 		return "redirect:/cart";
 	}
@@ -107,7 +105,11 @@ public class MainController {
 	
 
 	@GetMapping("/checkout")
-	public String checkout(@ModelAttribute("checkout") Checkout checkout) {
+	public String checkout(@ModelAttribute("checkout") Checkout checkout, HttpSession session) {
+		Cart cart = (Cart) session.getAttribute("cart");
+		if(cart.getProducts().size() < 1) {
+			return "redirect:/cart";
+		}
 		return "checkout.jsp";
 	}
 
