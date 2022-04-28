@@ -75,12 +75,17 @@
 					<ul class="dropdown-content">
 						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
 								Dresses</a></li>
+<<<<<<< HEAD
 						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
+=======
+						<li style="font-family: arvo;"><a href="/category/">Bridesmaid
+>>>>>>> 4b170d6 (minor changes)
 								Dresses</a></li>
 
 					</ul></li>
 				<li><a href="#">Men</a>
 					<ul class="dropdown-content">
+<<<<<<< HEAD
 						<li style="font-family: arvo;"><a href="/category/tuxedos">Tuxedos</a></li>
 						<li style="font-family: arvo;"><a href="/category/suits">Suits</a></li>
 					</ul></li>
@@ -90,6 +95,18 @@
 						<li style="font-family: arvo;"><a href="/category/jewelry">Jewelry</a></li>
 						<li style="font-family: arvo;"><a href="/category/tiaras">Tiaras</a></li>
 						<li style="font-family: arvo;"><a href="/category/ties">Ties</a></li>
+=======
+						<li style="font-family: arvo;"><a href="/category/">Tuxedos</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Suits</a></li>
+
+					</ul></li>
+				<li><a href="#">Accessories</a>
+					<ul class="dropdown-content">
+						<li style="font-family: arvo;"><a href="/category/dresses">Veils</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Jewelry</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Tiaras</a></li>
+						<li style="font-family: arvo;"><a href="/category/">Ties</a></li>
+>>>>>>> 4b170d6 (minor changes)
 					</ul></li>
 				<li><a href="/about">About</a>
 			</ul>
@@ -102,9 +119,9 @@
 	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
 
-		
 
-	<%-- 	 <c:if test="${userId}">
+
+		<%-- 	 <c:if test="${userId}">
 			<a
 				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
 				href="/enter">Sign Out</a>
@@ -114,7 +131,7 @@
 				style="font-family: arvo; font-size: 10pt; color: black; align-self: center;"
 				href="/enter">Sign In</a>
 		</c:if> --%>
- 
+
 
 	</div>
 
@@ -137,7 +154,7 @@
 			<br>
 			<p>Choose your size:</p>
 			<form action="/addtocart/${product.id}" method="post">
-				<select class="form-select form-select-sm" name="size">
+				<select class="form-select form-select-sm mb-4 w-25" name="size">
 					<option selected="size">Size</option>
 					<option>00</option>
 					<option>0</option>
@@ -152,14 +169,15 @@
 					<option>18</option>
 
 
-				</select>
-				
-				<input class="button2" type="submit" value="Add to Bag" />
+				</select> 
+				<label for="quantity">Quantity:</label> <input type="number"
+					id="quantity" name="quantity" min="1" max="5"><br> <input
+					class="button2" type="submit" value="Add to Bag" />
 
 			</form>
 			<br>
-				<p style="margin-top: 2%; font-size: 10pt;">Share This</p>
-				<p>insert icons</p>
+			<p style="margin-top: 2%; font-size: 10pt;">Share This</p>
+			<p>insert icons</p>
 
 		</div>
 
