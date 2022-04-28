@@ -98,7 +98,7 @@
 
 	</div>
 
-	<h5>If you have any questions or concerns, feel free to contact us below.</h5>
+	<h5>If you have any questions or concerns, feel free to contact us below. Leave a Comment!!</h5>
 
 	<form action="/contact" method="post">
 		<label>Email</label> <input type="email"> <label>Message</label>
