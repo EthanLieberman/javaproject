@@ -173,7 +173,7 @@
 
 				</select> 
 				<label for="quantity">Quantity:</label> <input type="number"
-					id="quantity" name="quantity" min="1" max="5"><br> <input
+					id="quantity" name="quantity" min="1" max="5" value="1"><br> <input
 					class="button2" type="submit" value="Add to Bag" />
 
 			</form>

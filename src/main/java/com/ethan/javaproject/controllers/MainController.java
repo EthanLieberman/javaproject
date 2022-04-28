@@ -86,10 +86,13 @@ public class MainController {
 
 //	Button to add items to cart
 	@PostMapping("/addtocart/{id}")
-	public String addtocart(Model model, HttpSession session, @PathVariable("id") Long id) {
+	public String addtocart(Model model, HttpSession session, @PathVariable("id") Long id, @RequestParam("quantity") int qty) {
 		Cart cart = (Cart) session.getAttribute("cart");
 		Product object = productService.findProduct(id);
-		cart.getProducts().add(object);
+		
+		for (int i = 0; i < qty; i++) {
+			cart.getProducts().add(object);
+		}
 		session.setAttribute("cart", cart);
 		return "redirect:/category/"+ object.getCategory() + "/" + object.getId();
 	}
