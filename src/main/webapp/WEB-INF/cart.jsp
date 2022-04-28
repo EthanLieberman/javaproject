@@ -61,6 +61,7 @@
 
 
 	</div>
+
 	
 	<div class="search">
 		<form action="/searchRequest" method="post">
@@ -105,6 +106,7 @@
 
 
 	
+
 	<div class="logoContainer">
 		<c:if test="${panda}">
 			<a href="/"><img class="logo" src="/image/panda.png" alt="logo" /></a>
@@ -114,9 +116,9 @@
 		</c:if>
 
 	</div>
-	
-	
-	
+
+
+
 
 	<h1 class="center">Shopping bag</h1>
 <div class="tableCenter">
@@ -189,12 +191,12 @@
 				<p>${i.price}</p>
 				<p>${i.description}</p>
 				<form action="/removefromcart/${loop.index}" method="post">
-					<input type="submit" value="remove from cart">
+					<input type="image" src="/image/recycle.png" alt="Remove from cart"
+						width="30">
 				</form>
 			</div>
 		</c:forEach>
 	</div>
-
 
 
 
@@ -248,6 +250,5 @@
 		</div>
 
 	</footer>
-
 </body>
 </html>
