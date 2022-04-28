@@ -292,3 +292,9 @@ ul li ul li a {
 	font-family: arvo;
 	font-size: 14pt;
 }
+
+/* contact form starts here */
+.contactContainer{
+	display: flex;
+	justify-content: center;
+}
