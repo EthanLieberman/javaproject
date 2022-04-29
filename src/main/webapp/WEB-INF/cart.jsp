@@ -26,7 +26,7 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div id="carouselSlidesOnly" class="carousel slide"
+	<div id="carouselSlidesOnly" class="carousel slide"
 		data-bs-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
@@ -42,7 +42,7 @@
 			</div>
 		</div>
 	</div>
-		<div
+	<div
 		style="display: flex; justify-content: flex-end; margin-right: 50px; gap: 10px;">
 
 		<a href="/cart"><img alt="cart" src="/image/shoppingbag.png"
@@ -62,7 +62,7 @@
 
 	</div>
 
-	
+
 	<div class="search">
 		<form action="/searchRequest" method="post">
 			<input type="search" id="search" placeholder="search for products"
@@ -80,8 +80,8 @@
 				<li><a href="#">Women</a>
 					<ul class="dropdown-content">
 
-						<li style="font-family: arvo;"><a href="/category/dresses">Wedding
-								Dresses</a></li>
+						<li style="font-family: arvo;"><a
+							href="/category/weddingdresses">Wedding Dresses</a></li>
 						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
 								Dresses</a></li>
 
@@ -105,7 +105,7 @@
 	</div>
 
 
-	
+
 
 	<div class="logoContainer">
 		<c:if test="${panda}">
@@ -119,83 +119,73 @@
 
 
 
+	<div style="width: 75%; margin: auto;">
+		<h1>Shopping bag</h1>
+	</div>
+	<div class="tableCenter">
+		<table class="table  table-hover w-75">
+			<thead>
+				<tr>
+					<th scope="col">product</th>
+					<th scope="col">quantity</th>
+					<th scope="col">price</th>
 
-	<h1 class="center">Shopping bag</h1>
-<div class="tableCenter">
-    <table class="table  table-hover w-75">
-  <thead>
-    <tr>
-      <th scope="col">product</th>
-      <th scope="col">quantity</th>
-      <th scope="col">price</th>
-      
-     
-    </tr>
-  </thead>
-  <c:forEach items="${cart.products}" var="i" varStatus="loop">
-  <tbody>
-    <tr>
-      <td scope="row">${i.name} <img class="aboutImage" alt="item" src="${i.url}">
-       <form action="/removefromcart/${loop.index}" method="post">
-                    <input class="button" type="submit" value="remove from cart">
-                </form>
-      </td>
-      <td>1</td>
-      <td>${i.price}</td>
-      
-      
-    </tr>
 
-  </tbody>
-</table>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${cart.products}" var="i" varStatus="loop">
+					<tr>
+						<td scope="row">${i.name}<img class="aboutImage" alt="item"
+							src="${i.url}">
+							<form action="/removefromcart/${loop.index}" method="post">
+								<input type="image" src="/image/recycle.png"
+									alt="Remove from cart" width="20px">
+							</form>
+						</td>
+						<td>1</td>
+						<td>$${i.price}</td>
 
-</div>
-<div class="center">
-<div class="total">
-<h4>Sub Total: </h4>
-<c:set var="sum" value="${sum + i.price}" />
-     
-                    </c:forEach>
-                    <c:set var="taxes" value="${sum * .07}" />
 
-                    <p>
-                        Taxes:
-                        <fmt:formatNumber type="number" maxFractionDigits="2"
-                            value="${taxes}" />
-                    </p>
-                    <p>
-                        Total:
-                        <fmt:formatNumber type="number" maxFractionDigits="2"
-                            value="${sum + taxes}" />
-                    </p>
-</div>
-</div> 
+					</tr>
+					<c:set var="sum" value="${sum + i.price}" />
+
+					<c:set var="taxes" value="${sum * .07}" />
+
+				</c:forEach>
+			</tbody>
+		</table>
+
+	</div>
+	<div class="center">
+		<div class="total" style="display: flex; align-items: flex-end;">
+			<h4>Sub Total:</h4>
+
+			<p>
+				Taxes:
+				<fmt:formatNumber type="currency" maxFractionDigits="2"
+					minFractionDigits="2" currencySymbol="$" value="${taxes}" />
+			</p>
+			<p>
+				Total:
+				<fmt:formatNumber type="currency" maxFractionDigits="2"
+					minFractionDigits="2" currencySymbol="$" value="${sum + taxes}" />
+			</p>
+		</div>
+	</div>
 
 	<div
 		style="margin: auto; display: flex; flex-direction: column; align-items: center;">
 
-		<div class="center">
+		<div class="center" style="gap: 3%;">
 			<form action="/" method="get">
-				<input type="submit" value="continue shopping">
+				<input class="button3" type="submit" value="continue shopping">
 			</form>
 			<form action="/checkout" method="get">
-				<input type="submit" value="checkout">
+				<input class="button" type="submit" value="checkout">
 			</form>
 		</div>
-		<c:forEach items="${cart.products}" var="i" varStatus="loop">
-			<div>
-				<p>${i.name}</p>
-				<p>
-					<img alt="item" src="${i.url}">
-				</p>
-				<p>${i.price}</p>
-				<p>${i.description}</p>
-				<form action="/removefromcart/${loop.index}" method="post">
-					<input type="image" src="/image/recycle.png" alt="Remove from cart"
-						width="30">
-				</form>
-			</div>
-		</c:forEach>
+
 	</div>
 
 

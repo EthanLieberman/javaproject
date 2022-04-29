@@ -340,7 +340,6 @@ ul li ul li a {
 	flex-direction: column;
 	margin-bottom: 5%;
 	width: 1150px;
-	border: red 2px solid;
 	align-content: flex-end;
 	
 	
@@ -377,6 +376,8 @@ ul li ul li a {
 	height: 500px;
 	border: rgb(245,245,245) solid 3px;
 	text-align: center;
+	box-shadow: 5px 5px 16px 4px rgba(0,0,0,0.75);
+	margin-bottom: 2%;
 
 	}
 	.thankyoutext{

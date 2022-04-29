@@ -75,28 +75,34 @@
 				<li><a href="/">Home</a></li>
 				<li><a href="#">Women</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/dresses">Wedding Dresses</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Bridesmaid Dresses</a></li>
-					
+						<li style="font-family: arvo;"><a href="/category/weddingdresses">Wedding
+								Dresses</a></li>
+
+						<li style="font-family: arvo;"><a href="/category/bridesmaid">Bridesmaid
+
+								Dresses</a></li>
+
 					</ul></li>
 				<li><a href="#">Men</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/">Tuxedos</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Suits</a></li>
-						
+
+						<li style="font-family: arvo;"><a href="/category/tuxedos">Tuxedos</a></li>
+						<li style="font-family: arvo;"><a href="/category/suits">Suits</a></li>
 					</ul></li>
 				<li><a href="#">Accessories</a>
 					<ul class="dropdown-content">
-						<li style="font-family: arvo;"><a href="/category/dresses">Veils</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Jewelry</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Tiaras</a></li>
-						<li style="font-family: arvo;"><a href="/category/">Ties</a></li>
+						<li style="font-family: arvo;"><a href="/category/veils">Veils</a></li>
+						<li style="font-family: arvo;"><a href="/category/jewelry">Jewelry</a></li>
+						<li style="font-family: arvo;"><a href="/category/tiaras">Tiaras</a></li>
+						<li style="font-family: arvo;"><a href="/category/ties">Ties</a></li>
+
 					</ul></li>
 				<li><a href="/about">About</a>
 			</ul>
 		</div>
 
 	</div>
+	
 		<div class="coverImage">
 
 		<img class="firstDress"

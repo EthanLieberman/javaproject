@@ -125,8 +125,8 @@
 
 
 	<div class="center">
-		<div class="thankyou" style=" width: 500px; display: flex; justify-content: center; flex-direction: column; padding: 2%; margin-top: 3%;">
-		"INSERT ICON HERE!!!"
+		<div class="thankyou" style=" display: flex; justify-content: center; flex-direction: column; padding: 2%; margin-top: 3%;">
+		<img alt="couple image" src="/image/thankyou.png" width="150px" style="margin: auto">
 		<h1 class="thankyoutext" style="font-family: 'Oleo Script', cursive;">Thank you for your purchase!</h1>
 		<br>
 			<h5>Your Order Number is:  <%= (int) (Math.random() * 100000000) %></h5>
