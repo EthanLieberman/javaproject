@@ -32,7 +32,9 @@ public class AdminController {
 	
 	@GetMapping("/adminportal")
 	public String adminPortal(Model model, HttpSession session) {
-		
+		if (session.getAttribute("userId") == null) {
+			return "redirect:/error.404.jsp";
+		}
 		Long id = (Long) session.getAttribute("userId");
 		User user = userService.findOne(id);
 		if (!user.getAdmin()) {
@@ -52,7 +54,9 @@ public class AdminController {
 //	---------Add ----------
 	@GetMapping("/productAdd")
 	public String productAdd(@ModelAttribute("product") Product product, HttpSession session) {
-		
+		if (session.getAttribute("userId") == null) {
+			return "redirect:/error.404.jsp";
+		}
 		Long id = (Long) session.getAttribute("userId");
 		User user = userService.findOne(id);
 		if (!user.getAdmin()) {
@@ -66,7 +70,9 @@ public class AdminController {
 	public String ProductCreate(@Valid
 							@ModelAttribute("product") Product product,
 							BindingResult result, HttpSession session) {
-		
+		if (session.getAttribute("userId") == null) {
+			return "redirect:/error.404.jsp";
+		}
 		Long id = (Long) session.getAttribute("userId");
 		User user = userService.findOne(id);
 		if (!user.getAdmin()) {
@@ -88,7 +94,9 @@ public class AdminController {
 //	------Update-----------
 	@GetMapping("/update/products/{id}")
 	public String adminUpdate(@ModelAttribute("product") Product product, @PathVariable("id") Long id, Model model, HttpSession session) {
-		
+		if (session.getAttribute("userId") == null) {
+			return "redirect:/error.404.jsp";
+		}
 		Long userid = (Long) session.getAttribute("userId");
 		User user = userService.findOne(userid);
 		if (!user.getAdmin()) {
@@ -104,7 +112,9 @@ public class AdminController {
 	
 	@PutMapping("/update/products/{id}")
 	public String updateProduct(@Valid @ModelAttribute("product") Product product, BindingResult result, @PathVariable("id") Long id, Model model, HttpSession session) {
-		
+		if (session.getAttribute("userId") == null) {
+			return "redirect:/error.404.jsp";
+		}
 		Long userid = (Long) session.getAttribute("userId");
 		User user = userService.findOne(userid);
 		if (!user.getAdmin()) {
@@ -126,7 +136,9 @@ public class AdminController {
 //	--------Delete---------
 	@DeleteMapping("/delete/products/{id}")
 	public String adminDelete(@PathVariable("id") Long id, HttpSession session) {
-		
+		if (session.getAttribute("userId") == null) {
+			return "redirect:/error.404.jsp";
+		}
 		Long userid = (Long) session.getAttribute("userId");
 		User user = userService.findOne(userid);
 		if (!user.getAdmin()) {

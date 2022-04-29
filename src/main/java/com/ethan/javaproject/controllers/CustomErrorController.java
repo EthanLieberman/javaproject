@@ -22,8 +22,8 @@ public class CustomErrorController  implements ErrorController {
              
             if (statusCode == HttpStatus.NOT_FOUND.value()) {
                 // handle HTTP 404 Not Found error
-				return "redirect:/";		// to redirect to page other than error page
-//                 errorPage = "error/404.jsp";
+//				return "redirect:/";		// to redirect to page other than error page
+                 errorPage = "error/404.jsp";
                  
             } else if (statusCode == HttpStatus.FORBIDDEN.value()) {
                 // handle HTTP 403 Forbidden error
