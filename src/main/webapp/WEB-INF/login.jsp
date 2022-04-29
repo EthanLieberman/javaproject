@@ -114,7 +114,7 @@
 					</form:label>
 					<form:errors style="color: red;" path="password" />
 					<form:input path="password" class="form-control form-control-sm"
-						type="text" aria-label=".form-control-sm" />
+						type="password" aria-label=".form-control-sm" />
 				</div>
 				<div>
 					Confirm Password:
@@ -122,7 +122,7 @@
 					</form:label>
 					<form:errors style="color: red;" path="confirm" />
 					<form:input path="confirm" class="form-control form-control-sm"
-						type="text" aria-label=".form-control-sm" />
+						type="password" aria-label=".form-control-sm" />
 				</div>
 
 				<input class="button" type="submit" value="Submit" />
@@ -147,7 +147,7 @@
 					</form:label>
 					<form:errors style="color: red;" path="password" />
 					<form:input path="password" class="form-control form-control-sm"
-						type="text" aria-label=".form-control-sm" />
+						type="password" aria-label=".form-control-sm" />
 				</div>
 
 				<input class="button" type="submit" value="Submit" />

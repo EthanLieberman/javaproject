@@ -30,6 +30,7 @@
 			<thead>
 				<tr>
 					<th>Product</th>
+					<th>Category</th>
 					<th>Price</th>
 					<th>Edit</th>
 					<th>Delete</th>
@@ -40,6 +41,7 @@
 				<c:forEach items="${products}" var="p">
 					<tr>
 						<td><c:out value="${p.name}" /></td>
+						<td><c:out value="${p.category}" /></td>
 						<td>$<c:out value="${p.price}" /></td>
 
 						<td>

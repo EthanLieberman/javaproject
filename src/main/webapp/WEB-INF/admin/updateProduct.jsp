@@ -31,7 +31,7 @@
 				<form:errors path="url" />
 				<form:input path="url" />
 			</p>
-			<img alt="product image" src="${product.url}">
+			<img alt="product image" src="${product.url}" width="300px">
 			<p>
 				<form:label path="price">Price</form:label>
 				<form:errors path="price" />
