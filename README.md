@@ -1,4 +1,4 @@
-# javaproject
+# Black && White
 
 Hello everyone. We collaborated on a project to create an e-commerce website for all things wedding. 
 
